@@ -26,6 +26,7 @@ class Usuario {
 	vector<Publicacion*> publicaciones;
 public:
 	Usuario();
+	Usuario(string nombre, string apellido, string paisOrigen, string email, string contrasenia);
 	~Usuario();
 	string getNombre();
 	void eliminarCuenta();

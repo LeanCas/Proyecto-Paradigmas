@@ -8,17 +8,18 @@
 #ifndef SISTEMA_H_
 #define SISTEMA_H_
 #include <iostream>
+#include "Usuario.h"
 #include <vector>
 using namespace std;
 
 class Sistema {
 	string nombre;
-	vector<*Publicacion> publicaciones;
-	vector<*Usuario> usuarios;
+	vector<Publicacion*> publicaciones;
+	vector<Usuario*> usuarios;
 public:
 	Sistema();
 	~Sistema();
-	void crearUsuario(string, string, string, string);
+	void crearUsuario(string, string, string, string, string);
 	void suspenderPublicacion(Publicacion);
 	void listarPublicaciones();
 	void eliminarPublicacion(int);
