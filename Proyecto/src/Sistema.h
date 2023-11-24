@@ -15,7 +15,7 @@ using namespace std;
 class Sistema {
 	string nombre;
 	vector<Publicacion*> publicaciones;
-	vector<Usuario*> usuarios;
+	vector<Usuario> usuarios;
 public:
 	Sistema();
 	~Sistema();
