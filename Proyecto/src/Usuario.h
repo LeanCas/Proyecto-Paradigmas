@@ -9,6 +9,8 @@
 #define USUARIO_H_
 #include <iostream>
 #include <vector>
+#include "Publicacion.h"
+
 using namespace std;
 
 class Usuario {
@@ -20,8 +22,8 @@ class Usuario {
 	string email;
 	string contrasenia;
 	vector<string> notificaciones;
-	vector<*Publicacion> likesRespuestas;
-	vector<*Publicacion> publicaciones;
+	vector<Publicacion*> likesRespuestas;
+	vector<Publicacion*> publicaciones;
 public:
 	Usuario();
 	~Usuario();
