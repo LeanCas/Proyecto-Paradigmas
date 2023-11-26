@@ -9,12 +9,13 @@
 #define SISTEMA_H_
 #include <iostream>
 #include "Usuario.h"
+#include "Respuesta.h"
 #include <vector>
 using namespace std;
 
 class Sistema {
 	string nombre;
-	vector<Publicacion*> publicaciones;
+	vector<Respuesta*> respuestas;
 	vector<Usuario*> usuarios;
 public:
 	Sistema();
@@ -25,7 +26,7 @@ public:
 	void eliminarPublicacion(int);
 	void darMG(int idUsuario, int idRespuesta);
 	Usuario getUsuario(int idUsuario);
-	//Respuesta getRespuesta(int idRespuesta); Creo que deberia devolver un puntero a Respuesta
+	Respuesta getRespuesta(int idRespuesta); Creo que deberia devolver un puntero a Respuesta
 	void rankearUsuarios();
 	void eliminarUsuario(int idUsuario);
 };
