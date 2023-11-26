@@ -30,6 +30,23 @@ Usuario Sistema::getUsuario(int id)
 	return *Encontrado;
 }
 
+Respuesta Sistema :: getRespuesta(int idRespuesta){
+	Respuesta *Encontrado;
+		vector<Respuesta*>::iterator it;
+		for(it = usuarios.begin(); it!=usuarios.end(); ++it)
+		{
+			if((*it)->getId()==idRespuesta)
+			{
+				Encontrado = (*it);
+				break;
+			}
+		}
+		return *Encontrado;
+}
+
+
+
+
 Sistema::~Sistema() //Destructor de sistema sin terminar
 {
     for (Usuario* usuario : usuarios)

@@ -26,7 +26,7 @@ public:
 	void eliminarPublicacion(int);
 	void darMG(int idUsuario, int idRespuesta);
 	Usuario getUsuario(int idUsuario);
-	Respuesta getRespuesta(int idRespuesta); Creo que deberia devolver un puntero a Respuesta
+	Respuesta getRespuesta(int idRespuesta); //Creo que deberia devolver un puntero a Respuesta
 	void rankearUsuarios();
 	void eliminarUsuario(int idUsuario);
 };
