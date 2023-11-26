@@ -26,6 +26,8 @@ public:
 	Fecha getFecha();
 	string getTipo();
 	virtual void listarInformacion() = 0;
+	//
+	int getId();
 };
 
 #endif /* PUBLICACION_H_ */

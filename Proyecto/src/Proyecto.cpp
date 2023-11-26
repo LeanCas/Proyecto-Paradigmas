@@ -8,8 +8,15 @@
 
 #include <iostream>
 using namespace std;
+#include "Sistema.h"
 
 int main() {
-	cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
+	//mini pruebita xd
+	Sistema *sistema = new Sistema();
+
+	sistema->crearUsuario("Sofi", "Cruz", "Argentina", "blasjasbjs","12345fff");
+	cout <<"Nombre: " <<sistema->getUsuario(1).getNombre();
+
+	delete sistema;
 	return 0;
 }
