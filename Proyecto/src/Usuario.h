@@ -27,13 +27,14 @@ class Usuario {
 public:
 	Usuario();
 	Usuario(string nombre, string apellido, string paisOrigen, string email, string contrasenia);
-	~Usuario();
+	//~Usuario();
 	string getNombre();
+	int getId();
 	void eliminarCuenta();
 	int contarRespuestasAceptadas();
-	void crearPregunta(int tipo=1, string img);
-	void crearRespuesta(Pregunta);
-	void aceptarSolucion(Respuesta);
+	//void crearPregunta(int tipo=1, string img); Los comente porque me da un error
+	//void crearRespuesta(Pregunta);
+	//void aceptarSolucion(Respuesta); Estos dos ultimos creo que deberian recibir un puntero a publicación
 	void listarInformacion();
 };
 
