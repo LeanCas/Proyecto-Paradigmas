@@ -8,3 +8,5 @@
 #include "Estado.h"
 
 int Estado::autonumerico = 0;
+
+Estado::Estado(): id(++autonumerico) {}
