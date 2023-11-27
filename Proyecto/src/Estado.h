@@ -11,15 +11,21 @@
 
 using namespace std;
 
+class Pregunta;
+class Respuesta;
+
 class Estado {
 	static int autonumerico;
+
 protected:
 	int id;
 	string tipo;
+
 public:
 	Estado();
 	virtual ~Estado();
-	virtual string getTipo() = 0;
+	virtual string getTipo();
+	virtual void agregarRespuesta(Respuesta* respuesta, Pregunta* pregunta) = 0;	// Este método es el que cambia según el estado del contexto (Pregunta)
 };
 
 
