@@ -37,7 +37,7 @@ public:
 	void crearPregunta(string imagen, string titulo, string descripcion, vector<string> tags={});
 	void agregarRespuestaLikeada(Respuesta* respuesta);
 	bool pertenece(int idBuscado);
-	//int contarRespuestasAceptadas();
+	int contarRespuestasAceptadas();
 	//void crearPregunta(string imagen, string titulo, string descripcion, vector<string> tags={});
 	//void crearRespuesta(Pregunta);
 	//void aceptarSolucion(Respuesta); Estos dos ultimos creo que deberian recibir un puntero a publicación

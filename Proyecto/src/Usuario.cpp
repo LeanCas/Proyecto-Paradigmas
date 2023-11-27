@@ -93,3 +93,17 @@ bool Usuario::pertenece(int idBuscado) {
 	}
 	return false;
 }
+
+int Usuario::contarRespuestasAceptadas(){
+	int cont = 0;
+	vector<Respuesta*>::iterator it;
+		for(it = publicaciones.begin(); it!=publicaciones.end(); ++it)
+		{
+			if((*it)->getTipo() == 2){
+				if((*it)->esAceptada()){
+					cont++;
+				}
+			}
+		}
+	return cont;
+}
