@@ -80,3 +80,7 @@ void Usuario::crearPregunta(string imagen, string titulo, string descripcion, ve
     Pregunta* nuevaPregunta = new Pregunta(imagen, Fecha(), this, titulo, descripcion, tags);
     publicaciones.push_back(nuevaPregunta);
 }
+
+void Usuario::agregarRespuestaLikeada(Respuesta* respuesta) {
+    likesRespuestas.push_back(respuesta);
+}
