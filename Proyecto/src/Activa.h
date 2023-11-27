@@ -13,7 +13,7 @@ class Activa : public Estado {
 public:
 	Activa();
 	~Activa();
-	string getTipo();
+	void agregarRespuesta(Respuesta* respuesta, Pregunta* pregunta) override;
 };
 
 #endif /* ACTIVA_H_ */
