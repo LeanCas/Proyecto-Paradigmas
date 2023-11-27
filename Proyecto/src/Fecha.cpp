@@ -117,13 +117,27 @@ bool operator<(Fecha fecha1, Fecha fecha2){
 	if(fecha1.getAnio() > fecha2.getAnio())
 		valor =false;
 	else
-		if(fecha1.getAnio() == fecha2.getAnio())
-			if(fecha1.getMes() > fecha2.getMes())
+		if(fecha1.getAnio() == fecha2.getAnio()){
+			if(fecha1.getMes() > fecha2.getMes()){
 				valor= false;
-			else
-				if(fecha1.getMes() == fecha2.getMes())
-					if(fecha1.getDia() > fecha2.getDia())
+			}
+			else {
+				if(fecha1.getMes() == fecha2.getMes()) {
+					if(fecha1.getDia() > fecha2.getDia()) {
 						valor= false;
+					}
+				}
+			}
+		}
+
 	return valor;
 
+}
+
+
+// Sobrecarga del operador de inserción <<
+
+ostream& operator<<(ostream& os, const Fecha& fecha) {
+    os << "Día: " << fecha.getDia() << " Mes: " << fecha.getMes() << " Año: " << fecha.getAnio();
+    return os;
 }

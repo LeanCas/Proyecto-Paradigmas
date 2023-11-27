@@ -34,13 +34,16 @@ public:
 	//Operacion que transforma una fecha a string
     string toString();
 };
-//Sobrecarga del operador - como función
+//Sobrecarga del operador - como funciï¿½n
 //externa de la clase Fecha
-int operator-(Fecha fecha1, Fecha fecha2) ;
+int operator-(Fecha fecha1, Fecha fecha2);
 
-//Sobrecarga del operador < como función
+//Sobrecarga del operador < como funciï¿½n
 //externa de la clase Fecha
 bool operator<(Fecha fecha1, Fecha fecha2);
+
+// Sobrecarga del operador de inserciÃ³n <<
+ostream& operator<<(ostream& os, const Fecha& fecha);
 
 
 #endif /* FECHA_H_ */
