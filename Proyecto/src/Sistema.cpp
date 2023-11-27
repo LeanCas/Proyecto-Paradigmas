@@ -15,7 +15,7 @@ void Sistema :: crearUsuario(string nombre, string apellido, string paisOrigen, 
 	this->usuarios.push_back(nuevoUsuario);
 }
 
-Publicacion* Sistema::BuscarPublicaion(int id)
+Publicacion* Sistema::BuscarPublicacion(int id)
 {
 	Publicacion* Encontrado;
 	vector<Publicacion*>::iterator it;
@@ -44,16 +44,7 @@ Usuario* Sistema::getUsuario(int id) {
 }
 
 Respuesta* Sistema::getRespuesta(int idRespuesta) {
-	Respuesta* Encontrado;
-	vector<Respuesta*>::iterator it;
-	for(it = respuestas.begin(); it!=respuestas.end(); ++it)
-	{
-		if((*it)->getId()==idRespuesta)
-		{
-			Encontrado = (*it);
-			break;
-		}
-	}
+	Respuesta* Encontrado = BuscarPublicacion(idRespuesta);
 	return Encontrado;
 }
 

@@ -17,7 +17,6 @@ using namespace std;
 
 class Sistema {
 	string nombre;
-	vector<Respuesta*> respuestas;
 	vector<Publicacion*> publicaciones;
 	vector<Usuario*> usuarios;
 
@@ -27,7 +26,7 @@ public:
 	void crearUsuario(string, string, string, string, string);
 	void suspenderPublicacion(Publicacion*);
 	void listarPublicaciones();
-	Publicacion* BuscarPublicaion(int);// agregue eso
+	Publicacion* BuscarPublicacion(int);// agregue eso
 	void eliminarPublicacion(int);
 	void darMG(int idUsuario, int idRespuesta);
 	Usuario* getUsuario(int idUsuario);
