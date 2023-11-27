@@ -23,7 +23,7 @@ class Pregunta : public Publicacion {
 
 public:
 	Pregunta();
-	Pregunta(int tipo=1, string imagen="", Fecha fecha=Fecha(), Usuario* usuario=nullptr, string titulo="", string descripcion="", vector<string> tags={}, vector<Respuesta*> respuestas={});
+	Pregunta(string imagen="", Fecha fecha=Fecha(), Usuario* usuario=nullptr, string titulo="", string descripcion="", vector<string> tags={}, vector<Respuesta*> respuestas={});
 	Pregunta(const Pregunta& p);
 	// Constructor que acepta una Publicacion
 	Pregunta(const Publicacion& publicacion);
