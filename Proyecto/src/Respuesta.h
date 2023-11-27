@@ -17,16 +17,18 @@ class Respuesta : public Publicacion {
 	string contenido;
 	int meGusta;
 	bool aceptada;
+
 public:
 	Respuesta();
+	Respuesta(int tipo=2, string imagen="", Fecha fecha=Fecha(), Usuario *usuario=nullptr, string contenido="", int meGusta=0, bool aceptada=false);
+	Respuesta(const Respuesta& r);
+	// Constructor que acepta una Publicacion
+	Respuesta(const Publicacion& publicacion);
 	~Respuesta();
 	int contarMeGusta();
-	void listarInformacion();
+	void listarInformacion() override;
 	bool esAceptada();
+	void aceptarSolucion();
 };
-
-
-
-
 
 #endif /* RESPUESTA_H_ */
