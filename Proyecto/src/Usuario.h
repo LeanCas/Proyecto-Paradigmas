@@ -10,6 +10,7 @@
 #include <iostream>
 #include <vector>
 #include "Publicacion.h"
+#include "Respuesta.h"
 
 using namespace std;
 
@@ -22,20 +23,22 @@ class Usuario {
 	string email;
 	string contrasenia;
 	vector<string> notificaciones;
-	vector<Publicacion*> likesRespuestas;
 	vector<Publicacion*> publicaciones;
+	vector<Respuesta*> likesRespuestas;
+
 public:
 	Usuario();
-	Usuario(string nombre, string apellido, string paisOrigen, string email, string contrasenia);
-	//~Usuario();
+	Usuario(string nombre, string apellido, string paisOrigen, string email, string contrasenia, const vector<Publicacion*>& publicaciones={}, const vector<Respuesta*>& likesRespuestas={});
+	Usuario(const Usuario& u);
+	~Usuario();
 	string getNombre();
 	int getId();
-	void eliminarCuenta();
-	int contarRespuestasAceptadas();
-	//void crearPregunta(int tipo=1, string img); Los comente porque me da un error
+	//void eliminarCuenta();
+	//int contarRespuestasAceptadas();
+	//void crearPregunta(int tipo=1, string img, string titulo, string descripcion, vector<string> tags);
 	//void crearRespuesta(Pregunta);
 	//void aceptarSolucion(Respuesta); Estos dos ultimos creo que deberian recibir un puntero a publicación
-	void listarInformacion();
+	//void listarInformacion();
 };
 
 
