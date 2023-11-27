@@ -35,7 +35,8 @@ public:
 	int getId();
 	void eliminarCuenta();
 	void crearPregunta(string imagen, string titulo, string descripcion, vector<string> tags={});
-
+	void agregarRespuestaLikeada(Respuesta* respuesta);
+	bool pertenece(int idBuscado);
 	//int contarRespuestasAceptadas();
 	//void crearPregunta(string imagen, string titulo, string descripcion, vector<string> tags={});
 	//void crearRespuesta(Pregunta);

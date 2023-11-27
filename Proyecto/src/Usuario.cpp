@@ -84,3 +84,12 @@ void Usuario::crearPregunta(string imagen, string titulo, string descripcion, ve
 void Usuario::agregarRespuestaLikeada(Respuesta* respuesta) {
     likesRespuestas.push_back(respuesta);
 }
+
+bool Usuario::pertenece(int idBuscado) {
+	for (Publicacion* publicacion : publicaciones) {
+		if (publicacion->getId() == idBuscado) {
+			return true;
+		}
+	}
+	return false;
+}
