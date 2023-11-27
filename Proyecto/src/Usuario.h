@@ -34,7 +34,7 @@ public:
 	string getNombre();
 	int getId();
 	void eliminarCuenta();
-	void crearPregunta(string imagen, string titulo, string descripcion, vector<string> tags={}, vector<Respuesta*> respuestas={});
+	void crearPregunta(string imagen, string titulo, string descripcion, vector<string> tags={});
 
 	//int contarRespuestasAceptadas();
 	//void crearPregunta(string imagen, string titulo, string descripcion, vector<string> tags={});
