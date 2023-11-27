@@ -15,9 +15,8 @@ void Sistema :: crearUsuario(string nombre, string apellido, string paisOrigen, 
 	this->usuarios.push_back(nuevoUsuario);
 }
 
-Usuario Sistema::getUsuario(int id)
-{
-	Usuario *Encontrado;
+Usuario* Sistema::getUsuario(int id) {
+	Usuario* Encontrado;
 	vector<Usuario*>::iterator it;
 	for(it = usuarios.begin(); it!=usuarios.end(); ++it)
 	{
@@ -27,22 +26,23 @@ Usuario Sistema::getUsuario(int id)
 			break;
 		}
 	}
-	return *Encontrado;
+	return Encontrado;
 }
 
-Respuesta Sistema :: getRespuesta(int idRespuesta){
-	Respuesta *Encontrado;
-		vector<Respuesta*>::iterator it;
-		for(it = respuestas.begin(); it!=respuestas.end(); ++it)
+Respuesta* Sistema::getRespuesta(int idRespuesta) {
+	Respuesta* Encontrado;
+	vector<Respuesta*>::iterator it;
+	for(it = respuestas.begin(); it!=respuestas.end(); ++it)
+	{
+		if((*it)->getId()==idRespuesta)
 		{
-			if((*it)->getId()==idRespuesta)
-			{
-				Encontrado = (*it);
-				break;
-			}
+			Encontrado = (*it);
+			break;
 		}
-		return *Encontrado;
+	}
+	return Encontrado;
 }
+
 void Sistema::eliminarUsuario(int idUsuario)
 {
 	Usuario* UsuarioEliminar = getUsuario(idUsuario);
@@ -57,4 +57,5 @@ Sistema::~Sistema() //Destructor de sistema sin terminar
     }
     usuarios.clear();
 }
+
 
