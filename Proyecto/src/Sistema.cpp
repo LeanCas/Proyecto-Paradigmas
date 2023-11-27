@@ -58,4 +58,12 @@ Sistema::~Sistema() //Destructor de sistema sin terminar
     usuarios.clear();
 }
 
+void Sistema::darMG(int idUsuario, int idRespuesta) {
+    Respuesta* respuesta = getRespuesta(idRespuesta);
+    Usuario* usuario = getUsuario(idUsuario);
 
+    if (respuesta && usuario && !usuario->pertenece(idRespuesta)) {
+        respuesta->darMG();
+        usuario->agregarRespuestaLikeada(respuesta);
+    }
+}
