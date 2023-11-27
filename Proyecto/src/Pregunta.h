@@ -35,9 +35,7 @@ public:
 	string getTitulo();
 	void listarRespuestas();
 	vector<Respuesta*> getRespuestas();
-
-private:
-	void notificarUsuario(Respuesta);
+	void notificarUsuario(Respuesta*);
 };
 
 
