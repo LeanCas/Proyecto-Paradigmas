@@ -42,6 +42,19 @@ Usuario::Usuario(const Usuario& u): id(u.id), nombre(u.nombre),apellido(u.apelli
 	}
 }
 
+void Usuario::eliminarCuenta()
+{
+	vector<Publicacion*>::iterator it;
+	for(it = publicaciones.begin(); it!=publicaciones.end(); ++it)
+	{
+		Pregunta* pregunta = dynamic_cast<Pregunta*>(*it);//Realiza una conversión desde una clase especificada a una clase derivada
+		if(pregunta!=nullptr)
+		{
+			//pregunta->cambiarEstado();
+		}
+	}
+}
+
 // Destructor
 Usuario::~Usuario() {
     // Liberar memoria de las publicaciones

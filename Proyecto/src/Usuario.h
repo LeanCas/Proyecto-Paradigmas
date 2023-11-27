@@ -33,7 +33,7 @@ public:
 	~Usuario();
 	string getNombre();
 	int getId();
-	//void eliminarCuenta();
+	void eliminarCuenta();
 	//int contarRespuestasAceptadas();
 	//void crearPregunta(int tipo=1, string img, string titulo, string descripcion, vector<string> tags);
 	//void crearRespuesta(Pregunta);

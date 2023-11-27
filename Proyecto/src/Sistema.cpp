@@ -43,9 +43,11 @@ Respuesta Sistema :: getRespuesta(int idRespuesta){
 		}
 		return *Encontrado;
 }
-
-
-
+void Sistema::eliminarUsuario(int idUsuario)
+{
+	Usuario* UsuarioEliminar = getUsuario(idUsuario);
+	UsuarioEliminar->eliminarCuenta();
+}
 
 Sistema::~Sistema() //Destructor de sistema sin terminar
 {

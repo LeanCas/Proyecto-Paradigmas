@@ -10,6 +10,7 @@
 #include <iostream>
 #include "Usuario.h"
 #include "Respuesta.h"
+#include "publicacion.h"
 #include <vector>
 using namespace std;
 
@@ -26,7 +27,7 @@ public:
 	void eliminarPublicacion(int);
 	void darMG(int idUsuario, int idRespuesta);
 	Usuario getUsuario(int idUsuario);
-	Respuesta getRespuesta(int idRespuesta); //Creo que deberia devolver un puntero a Respuesta
+	Respuesta getRespuesta(int idRespuesta);
 	void rankearUsuarios();
 	void eliminarUsuario(int idUsuario);
 };

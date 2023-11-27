@@ -29,7 +29,7 @@ public:
 	Pregunta(const Publicacion& publicacion);
 	~Pregunta();
 	void agregarRespuesta(Respuesta);
-	//void cambiarEstado(Estado);
+	void cambiarEstado(Estado*);
 	void rankearRespuesta();
 	void listarInformacion() override;
 	string getTitulo();
