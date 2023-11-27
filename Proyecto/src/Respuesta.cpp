@@ -13,7 +13,7 @@ Respuesta::Respuesta(): Publicacion(), contenido(""), meGusta(0), aceptada(false
 }
 
 // Constructor sobrecargado
-Respuesta::Respuesta(int tipo, string imagen, Fecha fecha, Usuario *usuario, string contenido, int meGusta, bool aceptada): Publicacion(2, imagen, fecha, usuario), contenido(contenido), meGusta(meGusta), aceptada(aceptada) {}
+Respuesta::Respuesta(string imagen, Fecha fecha, Usuario *usuario, string contenido, int meGusta, bool aceptada): Publicacion(2, imagen, fecha, usuario), contenido(contenido), meGusta(meGusta), aceptada(aceptada) {}
 
 // Constructor copia
 Respuesta::Respuesta(const Respuesta& r): Publicacion(r), contenido(r.contenido), meGusta(r.meGusta), aceptada(r.aceptada) {}

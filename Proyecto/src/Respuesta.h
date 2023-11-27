@@ -20,7 +20,7 @@ class Respuesta : public Publicacion {
 
 public:
 	Respuesta();
-	Respuesta(int tipo=2, string imagen="", Fecha fecha=Fecha(), Usuario *usuario=nullptr, string contenido="", int meGusta=0, bool aceptada=false);
+	Respuesta(string imagen="", Fecha fecha=Fecha(), Usuario *usuario=nullptr, string contenido="", int meGusta=0, bool aceptada=false);
 	Respuesta(const Respuesta& r);
 	// Constructor que acepta una Publicacion
 	Respuesta(const Publicacion& publicacion);
