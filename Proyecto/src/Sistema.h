@@ -11,13 +11,14 @@
 #include <vector>
 #include "Usuario.h"
 #include "Respuesta.h"
-#include "publicacion.h"
+#include "Publicacion.h"
 
 using namespace std;
 
 class Sistema {
 	string nombre;
 	vector<Respuesta*> respuestas;
+	vector<Publicacion*> publicaciones;
 	vector<Usuario*> usuarios;
 
 public:
@@ -26,6 +27,7 @@ public:
 	void crearUsuario(string, string, string, string, string);
 	void suspenderPublicacion(Publicacion*);
 	void listarPublicaciones();
+	Publicacion* BuscarPublicaion(int);// agregue eso
 	void eliminarPublicacion(int);
 	void darMG(int idUsuario, int idRespuesta);
 	Usuario* getUsuario(int idUsuario);
