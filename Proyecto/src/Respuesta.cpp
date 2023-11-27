@@ -30,3 +30,7 @@ void Respuesta::listarInformacion() {
 	cout << "Me gusta: " << this->meGusta << endl;
 	cout << "Fecha: " << this->fecha << endl;
 }
+
+void Respuesta::darMG() {
+	this->meGusta++;
+}

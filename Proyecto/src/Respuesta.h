@@ -25,6 +25,7 @@ public:
 	// Constructor que acepta una Publicacion
 	Respuesta(const Publicacion& publicacion);
 	~Respuesta();
+	void darMG();
 	int contarMeGusta();
 	void listarInformacion() override;
 	bool esAceptada();
