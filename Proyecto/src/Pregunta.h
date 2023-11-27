@@ -28,7 +28,7 @@ public:
 	// Constructor que acepta una Publicacion
 	Pregunta(const Publicacion& publicacion);
 	~Pregunta();
-	void agregarRespuesta(Respuesta);
+	void agregarRespuesta(Respuesta*);
 	void cambiarEstado(Estado*);
 	void rankearRespuesta();
 	void listarInformacion() override;

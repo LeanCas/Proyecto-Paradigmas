@@ -26,6 +26,10 @@ Pregunta::Pregunta(const Pregunta& p): Publicacion(p), titulo(p.titulo), descrip
 	}
 }
 
+void Pregunta :: agregarRespuesta(Respuesta* respuesta){
+	this->respuestas.push_back(respuesta);
+}
+
 Pregunta::Pregunta(const Publicacion& publicacion) : Publicacion(publicacion) {}
 
 // Destructor
