@@ -8,7 +8,7 @@
 #include "Inactiva.h"
 
 string Inactiva :: getTipo(){
-	return 'Inactiva';
+	return "Inactiva";
 }
 
 

@@ -4,9 +4,10 @@
  *  Created on: 24 nov. 2023
  *      Author: Alumno
  */
-
 #include <vector>
+#include <algorithm>
 #include "Sistema.h"
+#include "Usuario.h"
 
 Sistema::Sistema(){}
 
@@ -71,4 +72,18 @@ void Sistema::darMG(int idUsuario, int idRespuesta) {
         respuesta->darMG();
         usuario->agregarRespuestaLikeada(respuesta);
     }
+}
+
+
+void Sistema::rankearUsuarios(){
+	 // Ordenar usuarios por la cantidad de respuestas aceptadas de mayor a menor
+	    sort(usuarios.begin(), usuarios.end(), [](Usuario* u1,Usuario* u2) {
+	        return u1->contarRespuestasAceptadas() > u2->contarRespuestasAceptadas();
+	    });
+
+	    // Imprimir o realizar otras operaciones según sea necesario
+	    cout << "Usuarios rankeados por respuestas aceptadas:" <<endl;
+	    for (Usuario* usuario : usuarios) {
+	        cout << "ID: "<<usuario->getId()<<", Nombre: "<<usuario->getNombre()<<endl;
+	    }
 }

@@ -15,7 +15,7 @@ int main() {
 	Sistema *sistema = new Sistema();
 
 	sistema->crearUsuario("Sofi", "Cruz", "Argentina", "blasjasbjs","12345fff");
-	cout <<"Nombre: " <<sistema->getUsuario(1).getNombre();
+	cout <<"Nombre: " <<sistema->getUsuario(1)->getNombre();
 
 	delete sistema;
 	return 0;

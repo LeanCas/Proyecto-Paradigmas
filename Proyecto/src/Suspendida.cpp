@@ -8,7 +8,7 @@
 #include "Suspendida.h"
 
 string Suspendida :: getTipo(){
-	return 'Suspendida';
+	return "Suspendida";
 }
 
 

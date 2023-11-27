@@ -8,7 +8,7 @@
 #include "Solucionada.h"
 
 string Solucionada :: getTipo(){
-	return 'Solucionada';
+	return "Solucionada";
 }
 
 
