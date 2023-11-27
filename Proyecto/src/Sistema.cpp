@@ -33,7 +33,7 @@ Usuario Sistema::getUsuario(int id)
 Respuesta Sistema :: getRespuesta(int idRespuesta){
 	Respuesta *Encontrado;
 		vector<Respuesta*>::iterator it;
-		for(it = usuarios.begin(); it!=usuarios.end(); ++it)
+		for(it = respuestas.begin(); it!=respuestas.end(); ++it)
 		{
 			if((*it)->getId()==idRespuesta)
 			{
