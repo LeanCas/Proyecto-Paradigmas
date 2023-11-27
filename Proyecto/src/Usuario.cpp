@@ -96,14 +96,15 @@ bool Usuario::pertenece(int idBuscado) {
 
 int Usuario::contarRespuestasAceptadas(){
 	int cont = 0;
-	vector<Respuesta*>::iterator it;
-		for(it = publicaciones.begin(); it!=publicaciones.end(); ++it)
-		{
-			if((*it)->getTipo() == 2){
-				if((*it)->esAceptada()){
-					cont++;
-				}
+	vector<Publicacion*>::iterator it;
+	for(it = publicaciones.begin(); it!=publicaciones.end(); ++it)
+	{// Utilizamos dynamic_cast para comprobar si el objeto es de tipo Respuesta
+		if ((*it)->getTipo() == 2 && dynamic_cast<Respuesta*>(*it) != nullptr) {
+			// El puntero apunta a un objeto de tipo Respuesta, podemos llamar a esAceptada()
+			if (dynamic_cast<Respuesta*>(*it)->esAceptada()) {
+				cont++;
 			}
 		}
+	}
 	return cont;
 }
