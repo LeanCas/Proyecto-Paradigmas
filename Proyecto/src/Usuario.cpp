@@ -75,3 +75,8 @@ string Usuario::getNombre(){
 int Usuario::getId(){
 	return id;
 }
+
+void Usuario::crearPregunta(string imagen, string titulo, string descripcion, vector<string> tags, vector<Respuesta*> respuestas) {
+    Pregunta* nuevaPregunta = new Pregunta(imagen, Fecha(), this, titulo, descripcion, tags, respuestas);
+    publicaciones.push_back(nuevaPregunta);
+}

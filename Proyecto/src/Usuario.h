@@ -34,8 +34,10 @@ public:
 	string getNombre();
 	int getId();
 	void eliminarCuenta();
+	void crearPregunta(string imagen, string titulo, string descripcion, vector<string> tags={}, vector<Respuesta*> respuestas={});
+
 	//int contarRespuestasAceptadas();
-	//void crearPregunta(int tipo=1, string img, string titulo, string descripcion, vector<string> tags);
+	//void crearPregunta(string imagen, string titulo, string descripcion, vector<string> tags={});
 	//void crearRespuesta(Pregunta);
 	//void aceptarSolucion(Respuesta); Estos dos ultimos creo que deberian recibir un puntero a publicación
 	//void listarInformacion();
