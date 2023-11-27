@@ -27,6 +27,10 @@ Publicacion::Publicacion(const Publicacion& p): id(p.id), tipo(p.tipo), imagen(p
     }
 }
 
+Fecha Publicacion :: getFecha(){
+	return this->fecha;
+}
+
 int Publicacion::getTipo() {
 	return this->tipo;
 }
