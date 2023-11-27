@@ -2,7 +2,7 @@
  * Pregunta.cpp
  *
  *  Created on: 26 nov. 2023
- *      Author: javie
+ *      Author: chavi
  */
 
 #include "Pregunta.h"
@@ -49,4 +49,8 @@ void Pregunta::listarInformacion() {
 	for (string T : this->tags) {
 		cout << T << endl;
 	}
+}
+
+vector<Respuesta*> Pregunta::getRespuestas() {
+	return respuestas;
 }

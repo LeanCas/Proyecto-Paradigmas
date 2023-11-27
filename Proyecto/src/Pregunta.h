@@ -28,12 +28,13 @@ public:
 	// Constructor que acepta una Publicacion
 	Pregunta(const Publicacion& publicacion);
 	~Pregunta();
-	void agregarRespuesta(Respuesta*);
-	void cambiarEstado(Estado*);
+	void agregarRespuesta(Respuesta* respuesta);
+	void cambiarEstado(Estado* nuevoEstado);
 	void rankearRespuesta();
 	void listarInformacion() override;
 	string getTitulo();
 	void listarRespuestas();
+	vector<Respuesta*> getRespuestas();
 
 private:
 	void notificarUsuario(Respuesta);
