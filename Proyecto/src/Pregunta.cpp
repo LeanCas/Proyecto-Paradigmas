@@ -4,7 +4,9 @@
  *  Created on: 26 nov. 2023
  *      Author: chavi
  */
-
+#include <vector>
+#include <algorithm>
+#include <functional>
 #include "Pregunta.h"
 #include "Usuario.h"
 #include "Activa.h"
@@ -77,4 +79,25 @@ Estado* Pregunta::getEstado() {
 void Pregunta::cambiarEstado(Estado* nuevoEstado) {
 	delete estado;		// Esto libera la memoria del estado anterior
 	estado = nuevoEstado;		// Se asigna el nuevo estado recibido como parámetro
+}
+
+void Pregunta::rankearRespuesta() {
+    // Primero colocamos las respuestas aceptadas al principio del vector
+    partition(respuestas.begin(), respuestas.end(),
+                   [](Respuesta* r) { return r->esAceptada(); });
+
+    // Ordenamos las respuestas en función de la cantidad de "me gusta"
+    sort(respuestas.begin(), respuestas.end(),[](Respuesta* u1, Respuesta* u2) {
+                  if (u1->esAceptada() && !u2->esAceptada()) {
+                      // Respuesta aceptada va antes
+                      return true;
+                  } else if (!u1->esAceptada() && u2->esAceptada()) {
+                      // Respuesta aceptada va después
+                      return false;
+                  } //else {
+                      // Ambas respuestas son aceptadas o no aceptadas,
+                      // Entonces ordenar por la cantidad de "me gustas"
+                      //return u1->contarMeGusta() > u2->contarMeGusta();
+                  //}
+              });
 }
