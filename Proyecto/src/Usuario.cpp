@@ -9,6 +9,7 @@
 #include "Publicacion.h"
 #include "Respuesta.h"
 #include "Pregunta.h"
+#include "Suspendida.h"
 
 using namespace std;
 

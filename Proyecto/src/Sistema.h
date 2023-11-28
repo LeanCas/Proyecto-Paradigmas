@@ -11,6 +11,7 @@
 #include <vector>
 #include "Usuario.h"
 #include "Respuesta.h"
+#include "Pregunta.h"
 #include "Publicacion.h"
 
 using namespace std;
@@ -26,7 +27,7 @@ public:
 	void crearUsuario(string, string, string, string, string);
 	void suspenderPublicacion(Publicacion*);
 	void listarPublicaciones();
-	Publicacion* BuscarPublicacion(int);// agregue eso
+	Publicacion* buscarPublicacion(int);
 	void eliminarPublicacion(int);
 	void darMG(int idUsuario, int idRespuesta);
 	Usuario* getUsuario(int idUsuario);

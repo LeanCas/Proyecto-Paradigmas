@@ -16,7 +16,7 @@ void Sistema :: crearUsuario(string nombre, string apellido, string paisOrigen, 
 	this->usuarios.push_back(nuevoUsuario);
 }
 
-Publicacion* Sistema::BuscarPublicacion(int id)
+Publicacion* Sistema::buscarPublicacion(int id)
 {
 	Publicacion* Encontrado;
 	vector<Publicacion*>::iterator it;
@@ -28,6 +28,12 @@ Publicacion* Sistema::BuscarPublicacion(int id)
 		}
 	}
 	return Encontrado;
+}
+
+void Sistema::eliminarPublicacion(int id)
+{
+	Publicacion* publicacionAEliminar = buscarPublicacion(id);
+	delete publicacionAEliminar; //Invoca al destructor de la clase derivada correspondiente
 }
 
 Usuario* Sistema::getUsuario(int id) {
@@ -45,7 +51,7 @@ Usuario* Sistema::getUsuario(int id) {
 }
 
 Respuesta* Sistema::getRespuesta(int idRespuesta) {
-	Respuesta* Encontrado = dynamic_cast<Respuesta*>(BuscarPublicacion(idRespuesta));
+	Respuesta* Encontrado = dynamic_cast<Respuesta*>(buscarPublicacion(idRespuesta));
 	return Encontrado;
 }
 
@@ -55,8 +61,14 @@ void Sistema::eliminarUsuario(int idUsuario)
 	UsuarioEliminar->eliminarCuenta();
 }
 
-Sistema::~Sistema() //Destructor de sistema sin terminar
+Sistema::~Sistema()
 {
+	for (Publicacion* publicacion : publicaciones)
+	{
+		delete publicacion;
+	}
+	publicaciones.clear();
+
     for (Usuario* usuario : usuarios)
     {
         delete usuario;
