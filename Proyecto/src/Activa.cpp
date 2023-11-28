@@ -13,3 +13,7 @@
 Activa::Activa(): Estado() {
 	tipo = "Activa";
 }
+
+Estado* Activa::clonar() const {
+    return new Activa(*this);
+}
