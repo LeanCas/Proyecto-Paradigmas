@@ -10,6 +10,16 @@
 #include "Respuesta.h"
 #include <vector>
 
+<<<<<<< HEAD
+/*Activa::Activa(): Estado(), tipo("Activa") {}
+
+void Activa::agregarRespuesta(Respuesta* respuesta, Pregunta* pregunta) {
+	vector<Respuesta*>& respuestas = pregunta->getRespuestas();
+	respuestas.push_back(respuesta);
+	pregunta->notificarUsuario(respuesta);
+}*/
+=======
 Activa::Activa(): Estado() {
 	tipo = "Activa";
 }
+>>>>>>> d89159d9d2ec956bc2bcf40d97666eda5e6e21ec

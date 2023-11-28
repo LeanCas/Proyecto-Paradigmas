@@ -22,7 +22,13 @@ public:
 	Respuesta();
 	Respuesta(string imagen="", Fecha fecha=Fecha(), Usuario *usuario=nullptr, string contenido="", int meGusta=0, bool aceptada=false);
 	Respuesta(const Respuesta& r);
+<<<<<<< HEAD
+	// Constructor que acepta una Publicacion
+	Respuesta(const Publicacion& publicacion);
+//	~Respuesta();
+=======
 	~Respuesta();
+>>>>>>> d89159d9d2ec956bc2bcf40d97666eda5e6e21ec
 	void darMG();
 	int contarMeGusta();
 	void listarInformacion() override;
