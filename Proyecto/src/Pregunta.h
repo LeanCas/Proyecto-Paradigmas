@@ -20,6 +20,7 @@ class Pregunta : public Publicacion {
 	string descripcion;
 	vector<string> tags;
 	vector<Respuesta*> respuestas;
+	Estado* estado;
 
 public:
 	Pregunta();
@@ -27,6 +28,7 @@ public:
 	Pregunta(const Pregunta& p);
 	~Pregunta();
 	void agregarRespuesta(Respuesta* respuesta);
+	Estado* getEstado();
 	void cambiarEstado(Estado* nuevoEstado);
 	void rankearRespuesta();
 	void listarInformacion() override;
