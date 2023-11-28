@@ -12,8 +12,7 @@
 class Activa : public Estado {
 public:
 	Activa();
-	~Activa();
-	void agregarRespuesta(Respuesta* respuesta, Pregunta* pregunta) override;
+	//void agregarRespuesta(Respuesta* respuesta, Pregunta* pregunta) override;
 };
 
 #endif /* ACTIVA_H_ */

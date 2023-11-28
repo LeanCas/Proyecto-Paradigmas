@@ -19,9 +19,9 @@ Respuesta::Respuesta(string imagen, Fecha fecha, Usuario *usuario, string conten
 Respuesta::Respuesta(const Respuesta& r): Publicacion(r), contenido(r.contenido), meGusta(r.meGusta), aceptada(r.aceptada) {}
 
 // Destructor
-/*Respuesta::~Respuesta() {
+Respuesta::~Respuesta() {
 	Publicacion::~Publicacion();		// Llama al destructor virtual de la clase base. Esto garantiza que se realice la limpieza adecuada en la jerarquía de clases.
-}*/
+}
 
 void Respuesta::listarInformacion() {
 	cout << "Contenido: " << this->contenido << endl;
