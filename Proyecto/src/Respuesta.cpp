@@ -18,8 +18,6 @@ Respuesta::Respuesta(string imagen, Fecha fecha, Usuario *usuario, string conten
 // Constructor copia
 Respuesta::Respuesta(const Respuesta& r): Publicacion(r), contenido(r.contenido), meGusta(r.meGusta), aceptada(r.aceptada) {}
 
-Respuesta::Respuesta(const Publicacion& publicacion) : Publicacion(publicacion), meGusta(0), aceptada(false) {}
-
 // Destructor
 /*Respuesta::~Respuesta() {
 	Publicacion::~Publicacion();		// Llama al destructor virtual de la clase base. Esto garantiza que se realice la limpieza adecuada en la jerarquía de clases.
