@@ -10,10 +10,10 @@
 #include "Respuesta.h"
 #include <vector>
 
-Activa::Activa(): Estado(), tipo("Activa") {}
+/*Activa::Activa(): Estado(), tipo("Activa") {}
 
 void Activa::agregarRespuesta(Respuesta* respuesta, Pregunta* pregunta) {
 	vector<Respuesta*>& respuestas = pregunta->getRespuestas();
 	respuestas.push_back(respuesta);
 	pregunta->notificarUsuario(respuesta);
-}
+}*/

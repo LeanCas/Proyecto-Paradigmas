@@ -45,7 +45,7 @@ Usuario* Sistema::getUsuario(int id) {
 }
 
 Respuesta* Sistema::getRespuesta(int idRespuesta) {
-	Respuesta* Encontrado = BuscarPublicacion(idRespuesta);
+	Respuesta* Encontrado = dynamic_cast<Respuesta*>(BuscarPublicacion(idRespuesta));
 	return Encontrado;
 }
 
@@ -76,12 +76,9 @@ void Sistema::darMG(int idUsuario, int idRespuesta) {
 
 
 void Sistema::rankearUsuarios(){
-	 // Ordenar usuarios por la cantidad de respuestas aceptadas de mayor a menor
 	    sort(usuarios.begin(), usuarios.end(), [](Usuario* u1,Usuario* u2) {
 	        return u1->contarRespuestasAceptadas() > u2->contarRespuestasAceptadas();
 	    });
-
-	    // Imprimir o realizar otras operaciones según sea necesario
 	    cout << "Usuarios rankeados por respuestas aceptadas:" <<endl;
 	    for (Usuario* usuario : usuarios) {
 	        cout << "ID: "<<usuario->getId()<<", Nombre: "<<usuario->getNombre()<<endl;

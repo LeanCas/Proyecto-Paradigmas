@@ -21,9 +21,9 @@ Respuesta::Respuesta(const Respuesta& r): Publicacion(r), contenido(r.contenido)
 Respuesta::Respuesta(const Publicacion& publicacion) : Publicacion(publicacion), meGusta(0), aceptada(false) {}
 
 // Destructor
-Respuesta::~Respuesta() {
+/*Respuesta::~Respuesta() {
 	Publicacion::~Publicacion();		// Llama al destructor virtual de la clase base. Esto garantiza que se realice la limpieza adecuada en la jerarquía de clases.
-}
+}*/
 
 void Respuesta::listarInformacion() {
 	cout << "Contenido: " << this->contenido << endl;
@@ -33,4 +33,7 @@ void Respuesta::listarInformacion() {
 
 void Respuesta::darMG() {
 	this->meGusta++;
+}
+bool Respuesta::esAceptada(){
+	return aceptada;
 }

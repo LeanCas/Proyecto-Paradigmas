@@ -54,3 +54,7 @@ void Pregunta::listarInformacion() {
 vector<Respuesta*> Pregunta::getRespuestas() {
 	return respuestas;
 }
+
+string Pregunta::getTitulo(){
+	return titulo;
+}

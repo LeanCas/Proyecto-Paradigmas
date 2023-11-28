@@ -14,3 +14,5 @@ Estado::Estado(): id(++autonumerico) {}
 string Estado::getTipo() {
 	return tipo;
 }
+
+Estado::~Estado() {}
