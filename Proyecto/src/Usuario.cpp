@@ -25,12 +25,18 @@ Usuario::Usuario(const Usuario& u): id(u.id), nombre(u.nombre),apellido(u.apelli
 	for (Publicacion* publicacion : u.publicaciones) {
 		if (publicacion != nullptr) {
 			if (publicacion->getTipo() == 1) {
-				Pregunta* nuevaPublicacion = new Pregunta(*publicacion);
-				publicaciones.push_back(nuevaPublicacion);
+				Pregunta* pregunta = dynamic_cast<Pregunta*>(publicacion);	// Se transforma la publicacion al tipo Pregunta
+				if (pregunta != nullptr) {
+					Pregunta* nuevaPregunta = new Pregunta(*pregunta);
+					publicaciones.push_back(nuevaPregunta);
+				}
 			}
-			else {
-				Respuesta* nuevaPublicacion = new Respuesta(*publicacion);
-				publicaciones.push_back(nuevaPublicacion);
+			else if (publicacion->getTipo() == 2){
+				Respuesta* respuesta = dynamic_cast<Respuesta*>(publicacion);
+				if (respuesta != nullptr) {
+					Respuesta* nuevaRespuesta = new Respuesta(*respuesta);
+					publicaciones.push_back(nuevaRespuesta);
+				}
 			}
 		}
 	}
