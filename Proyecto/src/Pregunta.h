@@ -25,8 +25,6 @@ public:
 	Pregunta();
 	Pregunta(string imagen="", Fecha fecha=Fecha(), Usuario* usuario=nullptr, string titulo="", string descripcion="", vector<string> tags={}, vector<Respuesta*> respuestas={});
 	Pregunta(const Pregunta& p);
-	// Constructor que acepta una Publicacion
-	Pregunta(const Publicacion& publicacion);
 	~Pregunta();
 	void agregarRespuesta(Respuesta* respuesta);
 	void cambiarEstado(Estado* nuevoEstado);

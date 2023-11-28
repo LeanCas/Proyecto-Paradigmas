@@ -30,8 +30,6 @@ void Pregunta :: agregarRespuesta(Respuesta* respuesta){
 	this->respuestas.push_back(respuesta);
 }
 
-Pregunta::Pregunta(const Publicacion& publicacion) : Publicacion(publicacion) {}
-
 // Destructor
 Pregunta::~Pregunta() {
 	for (Respuesta* respuesta : respuestas) {
