@@ -62,6 +62,14 @@ string Pregunta::getTitulo(){
 	return titulo;
 }
 
+void Pregunta::listarRespuestas()
+{
+	for(Respuesta* respuesta: respuestas)
+	{
+		respuesta->listarInformacion();
+	}
+}
+
 Estado* Pregunta::getEstado() {
 	return estado;
 }

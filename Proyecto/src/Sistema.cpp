@@ -16,6 +16,19 @@ void Sistema :: crearUsuario(string nombre, string apellido, string paisOrigen, 
 	this->usuarios.push_back(nuevoUsuario);
 }
 
+void Sistema::listarPublicaciones()
+{
+	for(Publicacion* publicacion : publicaciones)
+	{
+		if(publicacion->getTipo() == 1)
+		{
+			Pregunta* pregunta = dynamic_cast<Pregunta*>(publicacion);
+			pregunta->getTitulo();
+			pregunta->listarRespuestas();
+		}
+	}
+}
+
 Publicacion* Sistema::buscarPublicacion(int id)
 {
 	Publicacion* Encontrado;
