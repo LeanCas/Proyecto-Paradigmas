@@ -40,7 +40,7 @@ public:
 	int contarRespuestasAceptadas();
 	//void crearRespuesta(Pregunta);
 	//void aceptarSolucion(Respuesta); Estos dos ultimos creo que deberian recibir un puntero a publicación
-	//void listarInformacion();
+	void listarInformacion();
 };
 
 

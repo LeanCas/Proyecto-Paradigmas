@@ -115,3 +115,10 @@ int Usuario::contarRespuestasAceptadas(){
 	}
 	return cont;
 }
+
+void Usuario::listarInformacion(){
+	cout << "Id: " << id << endl;
+	cout << "Nombre: " << nombre << endl;
+	cout << "Apellido: " << apellido << endl;
+	cout << "Email: " << email<<endl;
+}
