@@ -22,8 +22,6 @@ public:
 	Respuesta();
 	Respuesta(string imagen="", Fecha fecha=Fecha(), Usuario *usuario=nullptr, string contenido="", int meGusta=0, bool aceptada=false);
 	Respuesta(const Respuesta& r);
-	// Constructor que acepta una Publicacion
-	Respuesta(const Publicacion& publicacion);
 	~Respuesta();
 	void darMG();
 	int contarMeGusta();
