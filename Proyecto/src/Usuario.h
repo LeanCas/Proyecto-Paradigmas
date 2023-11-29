@@ -11,6 +11,7 @@
 #include <vector>
 #include "Publicacion.h"
 #include "Respuesta.h"
+#include "Pregunta.h"
 
 using namespace std;
 
@@ -38,9 +39,9 @@ public:
 	void agregarRespuestaLikeada(Respuesta* respuesta);
 	bool pertenece(int idBuscado);
 	int contarRespuestasAceptadas();
+	void aceptarSolucion(Pregunta* pregunta, int idRespuesta);
 	//void crearRespuesta(Pregunta);
-	//void aceptarSolucion(Respuesta); Estos dos ultimos creo que deberian recibir un puntero a publicación
-	void listarInformacion();
+	//void listarInformacion();
 };
 
 

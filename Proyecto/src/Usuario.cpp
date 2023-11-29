@@ -9,7 +9,6 @@
 #include "Publicacion.h"
 #include "Respuesta.h"
 #include "Pregunta.h"
-#include "Suspendida.h"
 
 using namespace std;
 
@@ -116,9 +115,10 @@ int Usuario::contarRespuestasAceptadas(){
 	return cont;
 }
 
-void Usuario::listarInformacion(){
-	cout << "Id: " << id << endl;
-	cout << "Nombre: " << nombre << endl;
-	cout << "Apellido: " << apellido << endl;
-	cout << "Email: " << email<<endl;
+void Usuario::aceptarSolucion(Pregunta* pregunta, int idRespuesta) {
+	for (Respuesta* respuesta : pregunta->getRespuestas()) {
+		if (respuesta->getId() == idRespuesta) {
+			respuesta->aceptarSolucion();
+		}
+	}
 }
