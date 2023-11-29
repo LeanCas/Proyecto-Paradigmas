@@ -20,18 +20,13 @@ Respuesta::Respuesta(const Respuesta& r): Publicacion(r), contenido(r.contenido)
 
 // Destructor
 Respuesta::~Respuesta() {
-	//Publicacion::~Publicacion();		// Llama al destructor virtual de la clase base. Esto garantiza que se realice la limpieza adecuada en la jerarquía de clases.
-}
-
-
-int Respuesta :: contarMeGusta(){
-	return this->meGusta;
+	Publicacion::~Publicacion();		// Llama al destructor virtual de la clase base. Esto garantiza que se realice la limpieza adecuada en la jerarquía de clases.
 }
 
 void Respuesta::listarInformacion() {
-	cout << "Contenido: " << this->contenido << endl;
-	cout << "Me gusta: " << this->meGusta << endl;
-	cout << "Fecha: " << this->fecha << endl;
+	cout << "Contenido: " << contenido << endl;
+	cout << "Me gusta: " << meGusta << endl;
+	cout << "Fecha: " << fecha << endl;
 }
 
 void Respuesta::darMG() {
@@ -39,4 +34,8 @@ void Respuesta::darMG() {
 }
 bool Respuesta::esAceptada(){
 	return aceptada;
+}
+
+void Respuesta::aceptarSolucion() {
+	aceptada = true;
 }
