@@ -34,6 +34,8 @@ public:
 	Respuesta* getRespuesta(int idRespuesta);
 	void rankearUsuarios();
 	void eliminarUsuario(int idUsuario);
+
+	void agregarPublicacion(Publicacion*);
 };
 
 #endif /* SISTEMA_H_ */
