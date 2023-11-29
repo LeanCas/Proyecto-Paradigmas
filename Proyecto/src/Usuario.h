@@ -38,8 +38,8 @@ public:
 	string getNombre();
 	int getId();
 	void eliminarCuenta();
-	void crearPregunta(string imagen, string titulo, string descripcion, vector<string> tags={});
-	void crearPregunta(Sistema* sistema, string imagen, string titulo, string descripcion, vector<string> tags={});
+	Pregunta* crearPregunta(string imagen, string titulo, string descripcion, vector<string> tags={});
+	//void crearPregunta(Sistema* sistema, string imagen, string titulo, string descripcion, vector<string> tags={});
 	void agregarRespuestaLikeada(Respuesta* respuesta);
 	bool pertenece(int idBuscado);
 	int contarRespuestasAceptadas();
