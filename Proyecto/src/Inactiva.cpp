@@ -6,6 +6,7 @@
  */
 
 #include "Inactiva.h"
+#include "Pregunta.h"
 
 string Inactiva :: getTipo(){
 	return "Inactiva";
@@ -14,3 +15,10 @@ string Inactiva :: getTipo(){
 
 
 
+void Inactiva::agregarRespuesta(Respuesta* respuesta, Pregunta* pregunta){
+
+	pregunta->cambiarEstado(pregunta->estadoActiva);
+
+	 pregunta->agregarRespuesta(respuesta);
+
+ }

@@ -11,6 +11,8 @@
 #include "Usuario.h"
 #include "Activa.h"
 
+Estado* Pregunta::estadoActiva = new Activa();
+
 // Constructor predeterminado
 Pregunta::Pregunta(): Publicacion(), titulo(""), descripcion("") {
 	respuestas = vector<Respuesta*>();
@@ -22,9 +24,9 @@ Pregunta::Pregunta(): Publicacion(), titulo(""), descripcion("") {
 Pregunta::Pregunta(string imagen, Fecha fecha, Usuario* usuario, string titulo, string descripcion, vector<string> tags, vector<Respuesta*> respuestas): Publicacion(1, imagen, fecha, usuario), titulo(titulo), descripcion(descripcion), tags(tags), estado(new Activa()) {}
 
 // Constructor copia
-Pregunta::Pregunta(const Pregunta& p): Publicacion(p), titulo(p.titulo), descripcion(p.descripcion), tags(p.tags) {
+Pregunta::Pregunta(const Pregunta& p): Publicacion(p), titulo(p.titulo), descripcion(p.descripcion), tags(p.tags),estado(p.estado){
     // Clona el estado de la pregunta referenciada utilizando el método clonar
-    estado = p.estado->clonar();
+  //  estado = p.estado->clonar();
 
 	// Realiza una copia profunda del vector de respuestas
 	for (Respuesta* respuesta : p.respuestas) {
@@ -35,6 +37,10 @@ Pregunta::Pregunta(const Pregunta& p): Publicacion(p), titulo(p.titulo), descrip
 
 void Pregunta :: agregarRespuesta(Respuesta* respuesta){
 	this->respuestas.push_back(respuesta);
+}
+
+void Pregunta :: addRespuesta(Respuesta* respuesta){
+	this->estado->agregarRespuesta(respuesta, this);
 }
 
 // Destructor

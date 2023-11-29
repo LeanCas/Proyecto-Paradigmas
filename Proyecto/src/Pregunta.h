@@ -23,11 +23,18 @@ class Pregunta : public Publicacion {
 	Estado* estado;
 
 public:
+	static Estado* estadoActiva;
+
+
+public:
 	Pregunta();
 	Pregunta(string imagen="", Fecha fecha=Fecha(), Usuario* usuario=nullptr, string titulo="", string descripcion="", vector<string> tags={}, vector<Respuesta*> respuestas={});
 	Pregunta(const Pregunta& p);
 	~Pregunta();
+	void addRespuesta(Respuesta* respuesta);
+
 	void agregarRespuesta(Respuesta* respuesta);
+
 	Estado* getEstado();
 	void cambiarEstado(Estado* nuevoEstado);
 	void rankearRespuesta();

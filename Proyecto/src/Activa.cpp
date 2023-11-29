@@ -17,3 +17,8 @@ Activa::Activa(): Estado() {
 Estado* Activa::clonar() const {
     return new Activa(*this);
 }
+ void Activa::agregarRespuesta(Respuesta* respuesta, Pregunta* pregunta){
+
+	 pregunta->agregarRespuesta(respuesta);
+
+ }

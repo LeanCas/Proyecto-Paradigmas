@@ -14,6 +14,8 @@ public:
 	Inactiva();
 	~Inactiva();
 	string getTipo();
+	void agregarRespuesta(Respuesta* respuesta, Pregunta* pregunta);
+
 };
 
 #endif /* INACTIVA_H_ */

@@ -40,6 +40,10 @@ int main() {
 
 	Usuario* usuario1 = sistema->getUsuario(1);
 
+	Usuario* usuario2 = sistema->getUsuario(2);
+
+	Usuario* usuario3 = sistema->getUsuario(3);
+
 	usuario1->listarInformacion();
 
 	vector<string> tags;
@@ -54,9 +58,20 @@ int main() {
 
 	usuario1->crearPregunta(sistema,"oso.png","Pregunta 3", "Descripcion 3", tags);
 
+	usuario2->crearPregunta(sistema,"oso.png","Pregunta 4", "Descripcion 4", tags);
+
+	usuario3->crearPregunta(sistema,"oso.png","Pregunta 5", "Descripcion 5", tags);
+
 	// LISTAMOS PUBLICACIONES
 
 	sistema->listarPublicaciones();
+
+	//PROBAMOS BUSCAR PUBLICACION
+
+	Publicacion* respuesta1 = sistema->buscarPublicacion(1);
+
+	// HACEMOS RESPUESTAS
+
 
 
 

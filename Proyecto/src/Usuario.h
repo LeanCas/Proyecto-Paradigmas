@@ -44,7 +44,7 @@ public:
 	bool pertenece(int idBuscado);
 	int contarRespuestasAceptadas();
 	void aceptarSolucion(Pregunta* pregunta, int idRespuesta);
-	//void crearRespuesta(Pregunta);
+	//void crearRespuesta(Pregunta); // Debe llamar a addRespuesta
 	void listarInformacion();
 };
 
