@@ -8,6 +8,7 @@
 #include <algorithm>
 #include "Sistema.h"
 #include "Usuario.h"
+#include "Suspendida.h"
 
 Sistema::Sistema(){}
 
@@ -41,6 +42,21 @@ Publicacion* Sistema::buscarPublicacion(int id)
 		}
 	}
 	return Encontrado;
+}
+
+void Sistema :: suspenderPublicacion(Publicacion* publicacion){
+
+	Pregunta* pregunta = dynamic_cast<Pregunta*>(publicacion);
+
+	Fecha* fechaActual;
+	fechaActual->setFechaActual();
+	Fecha* fechaPublicacion;
+	fechaPublicacion = pregunta->getFecha();
+
+	if(fechaActual->getMes() - fechaPublicacion->getMes() >= 6){
+		Estado* nuevoEstado = new Suspendida();
+		pregunta->cambiarEstado(nuevoEstado);
+	}
 }
 
 void Sistema::eliminarPublicacion(int id)

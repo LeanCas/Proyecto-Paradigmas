@@ -14,6 +14,7 @@ public:
 	Suspendida();
 	~Suspendida();
 	string getTipo();
+	Estado* clonar() const override;
 };
 
 #endif /* SUSPENDIDA_H_ */
