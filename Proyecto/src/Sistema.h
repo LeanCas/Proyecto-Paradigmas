@@ -22,7 +22,7 @@ class Sistema {
 	vector<Usuario*> usuarios;
 
 public:
-	Sistema();
+	Sistema(string);
 	~Sistema();
 	void crearUsuario(string, string, string, string, string);
 	void suspenderPublicacion(Publicacion*);

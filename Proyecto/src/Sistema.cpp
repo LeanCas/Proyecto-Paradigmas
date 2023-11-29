@@ -10,7 +10,9 @@
 #include "Usuario.h"
 #include "Suspendida.h"
 
-Sistema::Sistema(){}
+Sistema::Sistema(string nombre){
+	this->nombre = nombre;
+}
 
 void Sistema :: crearUsuario(string nombre, string apellido, string paisOrigen, string email, string contrasenia){
 	Usuario* nuevoUsuario = new Usuario(nombre, apellido, paisOrigen, email, contrasenia);
@@ -44,20 +46,20 @@ Publicacion* Sistema::buscarPublicacion(int id)
 	return Encontrado;
 }
 
-void Sistema :: suspenderPublicacion(Publicacion* publicacion){
+/*void Sistema :: suspenderPublicacion(Publicacion* publicacion){
 
 	Pregunta* pregunta = dynamic_cast<Pregunta*>(publicacion);
 
-	Fecha* fechaActual;
-	fechaActual->setFechaActual();
-	Fecha* fechaPublicacion;
+	Fecha fechaActual;
+	fechaActual.setFechaActual();
+	Fecha fechaPublicacion;
 	fechaPublicacion = pregunta->getFecha();
 
-	if(fechaActual->getMes() - fechaPublicacion->getMes() >= 6){
+	if(fechaActual.getMes() - fechaPublicacion.getMes() >= 6){
 		Estado* nuevoEstado = new Suspendida();
 		pregunta->cambiarEstado(nuevoEstado);
 	}
-}
+}*/
 
 void Sistema::eliminarPublicacion(int id)
 {

@@ -21,6 +21,26 @@ using namespace std;
 #include "Fecha.h"
 
 int main() {
+
+	//PRUEBA DE SISTEMA
+
+	//CREACION DE RESPUESTAS
+
+	Sistema* sistema = new Sistema("Nombre sistema");
+
+	sistema->crearUsuario("usuario-nombre 1", "usuario-apellido 1", "Argentina", "example@gmail.com", "12345");
+
+
+
+
+
+
+
+
+
+
+
+	/*
 	//mini pruebita xd
 	Sistema *sistema = new Sistema();
 
@@ -28,5 +48,6 @@ int main() {
 	cout <<"Nombre: " <<sistema->getUsuario(1)->getNombre();
 
 	delete sistema;
+	*/
 	return 0;
 }
