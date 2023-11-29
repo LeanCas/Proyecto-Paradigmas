@@ -88,9 +88,6 @@ void Pregunta::cambiarEstado(Estado* nuevoEstado) {
 }
 
 void Pregunta::rankearRespuesta() {
-    // Primero colocamos las respuestas aceptadas al principio del vector
-    partition(respuestas.begin(), respuestas.end(),
-                   [](Respuesta* r) { return r->esAceptada(); });
 
     // Ordenamos las respuestas en función de la cantidad de "me gusta"
     sort(respuestas.begin(), respuestas.end(),[](Respuesta* u1, Respuesta* u2) {
@@ -100,10 +97,11 @@ void Pregunta::rankearRespuesta() {
                   } else if (!u1->esAceptada() && u2->esAceptada()) {
                       // Respuesta aceptada va después
                       return false;
-                  } //else {
-                      // Ambas respuestas son aceptadas o no aceptadas,
+                  } else {
+                      // Ambas respuestas no aceptadas,
                       // Entonces ordenar por la cantidad de "me gustas"
-                      //return u1->contarMeGusta() > u2->contarMeGusta();
-                  //}
+                      return u1->contarMeGusta() > u2->contarMeGusta();
+                  }
               });
+    this->listarRespuestas();
 }
