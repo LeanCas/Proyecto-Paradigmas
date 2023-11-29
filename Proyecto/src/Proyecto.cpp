@@ -28,12 +28,31 @@ int main() {
 
 	Sistema* sistema = new Sistema("Nombre sistema");
 
-	sistema->crearUsuario("usuario-nombre 1", "usuario-apellido 1", "Argentina", "example@gmail.com", "12345");
+	//CREACION DE USUARIOS
 
+	sistema->crearUsuario("usuario-nombre 1", "usuario-apellido 1", "Argentina", "example1@gmail.com", "12345");
 
+	sistema->crearUsuario("usuario-nombre 2", "usuario-apellido 2", "Uruguay", "example2@gmail.com", "12345");
 
+	sistema->crearUsuario("usuario-nombre 3", "usuario-apellido 3", "Colombia", "example3@gmail.com", "12345");
 
+	//CREACION DE PREGUNTAS
 
+	Usuario* usuario1 = sistema->getUsuario(1);
+
+	usuario1->listarInformacion();
+
+	vector<string> tags;
+
+	tags.push_back("tag1");
+	tags.push_back("tag2");
+	tags.push_back("tag3");
+
+	usuario1->crearPregunta("oso.png","Pregunta 1", "Descripcion 1", tags);
+
+	// LISTAMOS PUBLICACIONES
+
+	sistema->listarPublicaciones();
 
 
 
