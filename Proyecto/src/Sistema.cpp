@@ -152,5 +152,10 @@ void Sistema :: agregarPublicacion(Publicacion* publicacion){
 	this->publicaciones.push_back(publicacion);
 }
 
-
-
+void Sistema::crearPregunta(string imagen, string titulo, string descripcion, vector<string> tags, int idUsuario) {
+	Usuario* usuario = getUsuario(idUsuario);
+	if(usuario != nullptr) {
+		Pregunta *nuevaPregunta = usuario->crearPregunta(imagen, titulo, descripcion, tags);
+		publicaciones.push_back(nuevaPregunta);
+	}
+}

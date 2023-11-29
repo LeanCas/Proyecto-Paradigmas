@@ -36,6 +36,8 @@ public:
 	void eliminarUsuario(int idUsuario);
 
 	void agregarPublicacion(Publicacion*);
+
+	void crearPregunta(string imagen, string titulo, string descripcion, vector<string> tags, int idUsuario);
 };
 
 #endif /* SISTEMA_H_ */
