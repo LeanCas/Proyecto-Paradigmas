@@ -40,7 +40,7 @@ void Sistema::listarPublicaciones()
 		if(publicacion->getTipo() == 1)
 		{
 			Pregunta* pregunta = dynamic_cast<Pregunta*>(publicacion);
-			pregunta->getTitulo();
+			cout << endl << pregunta->getTitulo();
 			pregunta->listarRespuestas();
 		}
 	}
