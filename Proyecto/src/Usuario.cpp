@@ -137,3 +137,8 @@ void Usuario::aceptarSolucion(Pregunta* pregunta, int idRespuesta) {
 		}
 	}
 }
+
+void Usuario::crearRespuesta(Pregunta* pregunta, string imagen, string contenido){
+	Respuesta* nuevaRespuesta = new Respuesta(imagen, Fecha(), this, contenido);
+	pregunta->addRespuesta(nuevaRespuesta);
+}
