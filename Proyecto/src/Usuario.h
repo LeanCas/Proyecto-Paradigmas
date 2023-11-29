@@ -41,7 +41,7 @@ public:
 	int contarRespuestasAceptadas();
 	void aceptarSolucion(Pregunta* pregunta, int idRespuesta);
 	//void crearRespuesta(Pregunta);
-	//void listarInformacion();
+	void listarInformacion();
 };
 
 
