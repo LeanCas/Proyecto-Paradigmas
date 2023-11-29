@@ -48,7 +48,11 @@ int main() {
 	tags.push_back("tag2");
 	tags.push_back("tag3");
 
-	usuario1->crearPregunta("oso.png","Pregunta 1", "Descripcion 1", tags);
+	usuario1->crearPregunta(sistema,"oso.png","Pregunta 1", "Descripcion 1", tags);
+
+	usuario1->crearPregunta(sistema,"oso.png","Pregunta 2", "Descripcion 2", tags);
+
+	usuario1->crearPregunta(sistema,"oso.png","Pregunta 3", "Descripcion 3", tags);
 
 	// LISTAMOS PUBLICACIONES
 

@@ -9,9 +9,12 @@
 #define USUARIO_H_
 #include <iostream>
 #include <vector>
+#include "Sistema.h"
 #include "Publicacion.h"
 #include "Respuesta.h"
 #include "Pregunta.h"
+
+class Sistema;
 
 using namespace std;
 
@@ -36,6 +39,7 @@ public:
 	int getId();
 	void eliminarCuenta();
 	void crearPregunta(string imagen, string titulo, string descripcion, vector<string> tags={});
+	void crearPregunta(Sistema* sistema, string imagen, string titulo, string descripcion, vector<string> tags={});
 	void agregarRespuestaLikeada(Respuesta* respuesta);
 	bool pertenece(int idBuscado);
 	int contarRespuestasAceptadas();

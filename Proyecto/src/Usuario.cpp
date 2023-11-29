@@ -87,9 +87,17 @@ void Usuario::crearPregunta(string imagen, string titulo, string descripcion, ve
     publicaciones.push_back(nuevaPregunta);
 }
 
+void Usuario::crearPregunta(Sistema* sistema,string imagen, string titulo, string descripcion, vector<string> tags){
+	Pregunta* nuevaPregunta = new Pregunta(imagen, Fecha(), this, titulo, descripcion, tags);
+	publicaciones.push_back(nuevaPregunta);
+	sistema->agregarPublicacion(nuevaPregunta);
+}
+
 void Usuario::agregarRespuestaLikeada(Respuesta* respuesta) {
     likesRespuestas.push_back(respuesta);
 }
+
+
 
 bool Usuario::pertenece(int idBuscado) {
 	for (Publicacion* publicacion : publicaciones) {
