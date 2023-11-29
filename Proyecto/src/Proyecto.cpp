@@ -9,6 +9,16 @@
 #include <iostream>
 using namespace std;
 #include "Sistema.h"
+#include "Usuario.h"
+#include "Publicacion.h"
+#include "Pregunta.h"
+#include "Respuesta.h"
+#include "Estado.h"
+#include "Activa.h"
+#include "Inactiva.h"
+#include "Suspendida.h"
+#include "Solucionada.h"
+#include "Fecha.h"
 
 int main() {
 	//mini pruebita xd

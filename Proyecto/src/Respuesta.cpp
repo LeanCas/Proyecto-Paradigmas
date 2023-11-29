@@ -23,6 +23,11 @@ Respuesta::~Respuesta() {
 	//Publicacion::~Publicacion();		// Llama al destructor virtual de la clase base. Esto garantiza que se realice la limpieza adecuada en la jerarquía de clases.
 }
 
+
+int Respuesta :: contarMeGusta(){
+	return this->meGusta;
+}
+
 void Respuesta::listarInformacion() {
 	cout << "Contenido: " << this->contenido << endl;
 	cout << "Me gusta: " << this->meGusta << endl;
