@@ -88,8 +88,7 @@ void Pregunta::cambiarEstado(Estado* nuevoEstado) {
 }
 
 void Pregunta::rankearRespuesta() {
-
-    // Ordenamos las respuestas en función de la cantidad de "me gusta"
+    // Ordenamos las respuestas en funcion de la cantidad de "me gusta"
     sort(respuestas.begin(), respuestas.end(),[](Respuesta* u1, Respuesta* u2) {
                   if (u1->esAceptada() && !u2->esAceptada()) {
                       // Respuesta aceptada va antes
