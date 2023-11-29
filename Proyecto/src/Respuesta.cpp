@@ -40,3 +40,7 @@ bool Respuesta::esAceptada(){
 void Respuesta::aceptarSolucion() {
 	aceptada = true;
 }
+
+int Respuesta::contarMeGusta(){
+	return meGusta;
+}
