@@ -81,7 +81,13 @@ int main() {
 
 	sistema->listarPublicaciones();
 
+	//PRUEBA DE FUNCION DE DAR ME GUSTA, es id=6 por el autonumerico incremental en publicaciones, al crearse 5 publicaciones antes de pregunta
+	sistema->darMG(1,6);
+	sistema->darMG(2,6);
+	sistema->darMG(3,6);
 
+
+	sistema->listarPublicaciones();
 
 
 

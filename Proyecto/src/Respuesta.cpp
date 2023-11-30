@@ -26,7 +26,7 @@ Respuesta::~Respuesta() {
 
 void Respuesta::listarInformacion() {
 	cout << endl;
-	cout << "Contenido: " << contenido << endl;
+	cout << "Contenido: " << contenido << "ID: " << id << endl;
 	cout << "Me gusta: " << meGusta << endl;
 	cout << "Fecha: " << fecha << endl;
 	cout << endl;

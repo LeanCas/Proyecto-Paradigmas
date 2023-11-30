@@ -127,10 +127,10 @@ Sistema::~Sistema()
 }
 
 void Sistema::darMG(int idUsuario, int idRespuesta) {
-    Respuesta* respuesta = getRespuesta(idRespuesta);
-    Usuario* usuario = getUsuario(idUsuario);
+    Respuesta* respuesta = this->getRespuesta(idRespuesta);
+    Usuario* usuario = this->getUsuario(idUsuario);
 
-    if (respuesta && usuario && !usuario->pertenece(idRespuesta)) {
+    if (respuesta != nullptr && usuario != nullptr && !usuario->pertenece(idRespuesta)) {
         respuesta->darMG();
         usuario->agregarRespuestaLikeada(respuesta);
     }
