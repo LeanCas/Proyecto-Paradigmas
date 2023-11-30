@@ -55,7 +55,7 @@ void Usuario::eliminarCuenta()
 		if(publicacion->getTipo() == 1)
 		{
 			Pregunta* pregunta = dynamic_cast<Pregunta*>(publicacion); //Realiza una conversión desde una clase especificada a una clase derivada
-			pregunta->cambiarEstado(pregunta->estadoInactiva);
+			pregunta->cambiarEstado(pregunta->estadoSuspendida);
 		}
 	}
 }

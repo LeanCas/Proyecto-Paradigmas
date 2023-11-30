@@ -91,7 +91,6 @@ Estado* Pregunta::getEstado() {
 }
 
 void Pregunta::cambiarEstado(Estado* nuevoEstado) {
-	delete estado;		// Esto libera la memoria del estado anterior
 	estado = nuevoEstado;		// Se asigna el nuevo estado recibido como parámetro
 }
 

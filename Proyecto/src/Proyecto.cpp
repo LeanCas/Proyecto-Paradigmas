@@ -87,6 +87,10 @@ int main() {
 	cout<<endl<<endl<<"Mostrar las publicaciones y sus me gustas en respuestas"<<endl;
 	sistema->listarPublicaciones();
 
+	cout<<endl<<endl<<"Prueba de cambio de estado"<<endl;
+	sistema->eliminarUsuario(2);
+	sistema->listarPublicaciones();
+
 
 	return 0;
 }
