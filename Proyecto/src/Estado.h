@@ -25,7 +25,6 @@ public:
 	Estado();
 	virtual ~Estado();
 	virtual string getTipo();
-	virtual Estado* clonar() const = 0; 	// Método virtual puro para clonar el estado (se usa en los constructores copia de pregunta)
 	virtual void agregarRespuesta(Respuesta* respuesta, Pregunta* pregunta) = 0;	// Este método es el que cambia según el estado del contexto (Pregunta)
 };
 
