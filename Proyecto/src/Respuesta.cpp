@@ -20,7 +20,6 @@ Respuesta::Respuesta(const Respuesta& r): Publicacion(r), contenido(r.contenido)
 
 // Destructor
 Respuesta::~Respuesta() {
-	delete usuario;
 	//Publicacion::~Publicacion();		// Llama al destructor virtual de la clase base. Esto garantiza que se realice la limpieza adecuada en la jerarquía de clases.
 }
 
