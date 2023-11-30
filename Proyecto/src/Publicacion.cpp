@@ -45,3 +45,7 @@ Publicacion::~Publicacion() {
 		delete usuario;
 	}
 }
+
+Usuario* Publicacion::getUsuario() {
+	return usuario;
+}

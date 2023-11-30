@@ -33,6 +33,7 @@ public:
 	int getTipo();
 	virtual void listarInformacion() = 0;
 	int getId();
+	Usuario* getUsuario();
 };
 
 #endif /* PUBLICACION_H_ */
