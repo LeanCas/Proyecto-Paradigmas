@@ -55,6 +55,7 @@ Pregunta::~Pregunta() {
 	for (Respuesta* respuesta : respuestas) {
 		delete respuesta;
 	}
+	respuestas.clear();
 }
 
 void Pregunta::listarInformacion() {

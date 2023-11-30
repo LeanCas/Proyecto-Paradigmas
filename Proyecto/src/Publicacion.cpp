@@ -41,8 +41,10 @@ int Publicacion::getId() {
 
 // Destructor
 Publicacion::~Publicacion() {
-	if (usuario != nullptr) {
+	if (usuario == nullptr) {
 		delete usuario;
+	}else{
+		delete this;
 	}
 }
 

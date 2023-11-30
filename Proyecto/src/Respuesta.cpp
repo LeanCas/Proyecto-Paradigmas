@@ -20,12 +20,12 @@ Respuesta::Respuesta(const Respuesta& r): Publicacion(r), contenido(r.contenido)
 
 // Destructor
 Respuesta::~Respuesta() {
-	//Publicacion::~Publicacion();		// Llama al destructor virtual de la clase base. Esto garantiza que se realice la limpieza adecuada en la jerarquía de clases.
+	Publicacion::~Publicacion();		// Llama al destructor virtual de la clase base. Esto garantiza que se realice la limpieza adecuada en la jerarquía de clases.
 }
 
 void Respuesta::listarInformacion() {
 	cout << endl;
-	cout << "Contenido: " << contenido << "ID: " << id << endl;
+	cout << "Contenido: " << contenido << endl;
 	cout << "Me gusta: " << meGusta << endl;
 	cout << "Fecha: " << fecha << endl;
 	cout << endl;

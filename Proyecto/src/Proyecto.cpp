@@ -88,5 +88,10 @@ int main() {
 
 	sistema->listarPublicaciones();
 
+	sistema->eliminarPublicacion(8);
+
+	sistema->listarPublicaciones();
+
+
 	return 0;
 }
