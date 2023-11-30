@@ -86,19 +86,7 @@ int main() {
 	sistema->darMG(2,6);
 	sistema->darMG(3,6);
 
-
 	sistema->listarPublicaciones();
 
-
-
-	/*
-	//mini pruebita xd
-	Sistema *sistema = new Sistema();
-
-	sistema->crearUsuario("Sofi", "Cruz", "Argentina", "blasjasbjs","12345fff");
-	cout <<"Nombre: " <<sistema->getUsuario(1)->getNombre();
-
-	delete sistema;
-	*/
 	return 0;
 }

@@ -19,28 +19,15 @@ void Sistema :: crearUsuario(string nombre, string apellido, string paisOrigen, 
 	this->usuarios.push_back(nuevoUsuario);
 }
 
-/*
 void Sistema::listarPublicaciones()
 {
 	for(Publicacion* publicacion : publicaciones)
 	{
 		if(publicacion->getTipo() == 1)
 		{
+			//Pregunta* pregunta = (Pregunta*)publicacion;
 			Pregunta* pregunta = dynamic_cast<Pregunta*>(publicacion);
-			pregunta->getTitulo();
-			pregunta->listarRespuestas();
-		}
-	}
-}*/
-
-void Sistema::listarPublicaciones()
-{
-	for(Publicacion* publicacion : publicaciones)
-	{
-		if(publicacion->getTipo() == 1)
-		{
-			Pregunta* pregunta = dynamic_cast<Pregunta*>(publicacion);
-			cout << endl << pregunta->getTitulo();
+			cout<<endl << pregunta->getTitulo();
 			pregunta->listarRespuestas();
 		}
 	}
@@ -48,7 +35,7 @@ void Sistema::listarPublicaciones()
 
 Publicacion* Sistema::buscarPublicacion(int id)
 {
-	Publicacion* Encontrado;
+	Publicacion* Encontrado = nullptr;
 	vector<Publicacion*>::iterator it;
 	for(it = publicaciones.begin(); it != publicaciones.end(); ++it)
 	{

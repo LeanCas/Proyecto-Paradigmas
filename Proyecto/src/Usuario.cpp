@@ -50,13 +50,12 @@ Usuario::Usuario(const Usuario& u): id(u.id), nombre(u.nombre),apellido(u.apelli
 
 void Usuario::eliminarCuenta()
 {
-	vector<Publicacion*>::iterator it;
-	for(it = publicaciones.begin(); it!=publicaciones.end(); ++it)
+	for(Publicacion* publicacion : publicaciones)
 	{
-		Pregunta* pregunta = dynamic_cast<Pregunta*>(*it);//Realiza una conversión desde una clase especificada a una clase derivada
-		if(pregunta!=nullptr)
+		if(publicacion->getTipo() == 1)
 		{
-			//pregunta->cambiarEstado();
+			Pregunta* pregunta = dynamic_cast<Pregunta*>(publicacion); //Realiza una conversión desde una clase especificada a una clase derivada
+			pregunta->cambiarEstado(pregunta->estadoInactiva);
 		}
 	}
 }
