@@ -39,12 +39,11 @@ public:
 	int getId();
 	void eliminarCuenta();
 	Pregunta* crearPregunta(string imagen, string titulo, string descripcion, vector<string> tags={});
-	//void crearPregunta(Sistema* sistema, string imagen, string titulo, string descripcion, vector<string> tags={});
 	void agregarRespuestaLikeada(Respuesta* respuesta);
 	bool pertenece(int idBuscado);
 	int contarRespuestasAceptadas();
 	void aceptarSolucion(Pregunta* pregunta, int idRespuesta);
-	void crearRespuesta(Pregunta* pregunta,string,string); // Debe llamar a addRespuesta
+	Respuesta* crearRespuesta(Pregunta* pregunta,string,string); // Debe llamar a addRespuesta
 	void listarInformacion();
 };
 

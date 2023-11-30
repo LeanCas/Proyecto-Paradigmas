@@ -52,15 +52,16 @@ int main() {
 	tags.push_back("tag2");
 	tags.push_back("tag3");
 
-	usuario1->crearPregunta(sistema,"oso.png","Pregunta 1", "Descripcion 1", tags);
+	sistema->crearPregunta("oso.png","Pregunta 1", "Descripcion 1", tags, 1);
 
-	usuario1->crearPregunta(sistema,"oso.png","Pregunta 2", "Descripcion 2", tags);
+	sistema->crearPregunta("oso.png","Pregunta 2", "Descripcion 2", tags, 1);
 
-	usuario1->crearPregunta(sistema,"oso.png","Pregunta 3", "Descripcion 3", tags);
+	sistema->crearPregunta("oso.png","Pregunta 3", "Descripcion 3", tags, 1);
 
-	usuario2->crearPregunta(sistema,"oso.png","Pregunta 4", "Descripcion 4", tags);
+	sistema->crearPregunta("oso.png","Pregunta 4", "Descripcion 4", tags, 2);
 
-	usuario3->crearPregunta(sistema,"oso.png","Pregunta 5", "Descripcion 5", tags);
+	sistema->crearPregunta("oso.png","Pregunta 5", "Descripcion 5", tags, 3);
+
 
 	// LISTAMOS PUBLICACIONES
 
@@ -72,7 +73,13 @@ int main() {
 
 	// HACEMOS RESPUESTAS
 
+	sistema->crearRespuesta(1,1,"osito.png","contenido-respuesta1");
 
+	sistema->crearRespuesta(1,2,"osito.png","contenido-respuesta2");
+
+	sistema->crearRespuesta(1,3,"osito.png","contenido-respuesta3");
+
+	sistema->listarPublicaciones();
 
 
 

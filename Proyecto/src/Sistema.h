@@ -32,12 +32,15 @@ public:
 	void darMG(int idUsuario, int idRespuesta);
 	Usuario* getUsuario(int idUsuario);
 	Respuesta* getRespuesta(int idRespuesta);
+	Pregunta* getPregunta(int idPregunta);
 	void rankearUsuarios();
 	void eliminarUsuario(int idUsuario);
+
 
 	void agregarPublicacion(Publicacion*);
 
 	void crearPregunta(string imagen, string titulo, string descripcion, vector<string> tags, int idUsuario);
+	void crearRespuesta(int idPregunta,int idUsuario,string imagen,string contenido);
 };
 
 #endif /* SISTEMA_H_ */

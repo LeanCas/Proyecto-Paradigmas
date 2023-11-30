@@ -100,6 +100,11 @@ Respuesta* Sistema::getRespuesta(int idRespuesta) {
 	return Encontrado;
 }
 
+Pregunta* Sistema::getPregunta(int idPregunta){
+	Pregunta* Encontrado = dynamic_cast<Pregunta*>(buscarPublicacion(idPregunta));
+	return Encontrado;
+}
+
 void Sistema::eliminarUsuario(int idUsuario)
 {
 	Usuario* UsuarioEliminar = getUsuario(idUsuario);
@@ -157,5 +162,14 @@ void Sistema::crearPregunta(string imagen, string titulo, string descripcion, ve
 	if(usuario != nullptr) {
 		Pregunta *nuevaPregunta = usuario->crearPregunta(imagen, titulo, descripcion, tags);
 		publicaciones.push_back(nuevaPregunta);
+	}
+}
+
+void Sistema :: crearRespuesta(int idPregunta,int idUsuario,string imagen,string contenido){
+	Pregunta* pregunta = this->getPregunta(idPregunta);
+	Usuario* usuario = getUsuario(idUsuario);
+	if(pregunta != nullptr){
+		Respuesta* nuevaRespuesta = usuario->crearRespuesta(pregunta, imagen, contenido);
+		publicaciones.push_back(nuevaRespuesta);
 	}
 }

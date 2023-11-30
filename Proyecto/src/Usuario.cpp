@@ -82,18 +82,6 @@ int Usuario::getId(){
 	return id;
 }
 
-Pregunta* Usuario::crearPregunta(string imagen, string titulo, string descripcion, vector<string> tags) {
-    Pregunta* nuevaPregunta = new Pregunta(imagen, Fecha(), this, titulo, descripcion, tags);
-    publicaciones.push_back(nuevaPregunta);
-    return nuevaPregunta;
-}
-
-void Usuario::crearPregunta(Sistema* sistema,string imagen, string titulo, string descripcion, vector<string> tags){
-	Pregunta* nuevaPregunta = new Pregunta(imagen, Fecha(), this, titulo, descripcion, tags);
-	publicaciones.push_back(nuevaPregunta);
-	sistema->agregarPublicacion(nuevaPregunta);
-}
-
 void Usuario::agregarRespuestaLikeada(Respuesta* respuesta) {
     likesRespuestas.push_back(respuesta);
 }
@@ -139,7 +127,15 @@ void Usuario::aceptarSolucion(Pregunta* pregunta, int idRespuesta) {
 	}
 }
 
-void Usuario::crearRespuesta(Pregunta* pregunta, string imagen, string contenido){
+Pregunta* Usuario::crearPregunta(string imagen, string titulo, string descripcion, vector<string> tags) {
+    Pregunta* nuevaPregunta = new Pregunta(imagen, Fecha(), this, titulo, descripcion, tags);
+    publicaciones.push_back(nuevaPregunta);
+    return nuevaPregunta;
+}
+
+
+Respuesta* Usuario::crearRespuesta(Pregunta* pregunta, string imagen, string contenido){
 	Respuesta* nuevaRespuesta = new Respuesta(imagen, Fecha(), this, contenido);
 	pregunta->addRespuesta(nuevaRespuesta);
+	return nuevaRespuesta;
 }
