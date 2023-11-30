@@ -139,3 +139,8 @@ Respuesta* Usuario::crearRespuesta(Pregunta* pregunta, string imagen, string con
 	pregunta->addRespuesta(nuevaRespuesta);
 	return nuevaRespuesta;
 }
+
+
+void Usuario::agregarNotificacion(string mensaje) {
+	notificaciones.push_back(mensaje);
+}
