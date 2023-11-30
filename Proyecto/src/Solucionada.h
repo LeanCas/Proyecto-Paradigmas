@@ -12,7 +12,7 @@
 class Solucionada : public Estado {
 public:
 	Solucionada();
-	Estado* clonar() const override;
+	~Solucionada();
 	void agregarRespuesta(Respuesta* respuesta, Pregunta* pregunta);
 };
 

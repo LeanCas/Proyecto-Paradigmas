@@ -12,7 +12,7 @@
 class Activa : public Estado {
 public:
 	Activa();
-	Estado* clonar() const override;
+	~Activa();
 	void agregarRespuesta(Respuesta* respuesta, Pregunta* pregunta);
 };
 

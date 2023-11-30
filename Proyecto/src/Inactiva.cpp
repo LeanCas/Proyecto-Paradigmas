@@ -7,24 +7,16 @@
 
 #include "Inactiva.h"
 #include "Pregunta.h"
+#include "Respuesta.h"
 
-Inactiva::Inactiva(): Estado(){
+Inactiva::Inactiva(): Estado() {
 	tipo = "Inactiva";
 }
 
-string Inactiva :: getTipo(){
-	return "Inactiva";
-}
-
-Estado* Inactiva::clonar() const {
-    return new Inactiva(*this);
-}
-
+Inactiva::~Inactiva() {}
 
 void Inactiva::agregarRespuesta(Respuesta* respuesta, Pregunta* pregunta){
-
 	pregunta->cambiarEstado(pregunta->estadoActiva);
-
-	 pregunta->agregarRespuesta(respuesta);
-
- }
+	pregunta->agregarRespuesta(respuesta);
+	pregunta->notificarUsuario(respuesta);
+}

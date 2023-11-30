@@ -7,20 +7,14 @@
 
 #include "Solucionada.h"
 #include "Pregunta.h"
+#include "Respuesta.h"
 
-Solucionada::Solucionada(): Estado(){
+Solucionada::Solucionada(): Estado() {
 	tipo = "Solucionada";
 }
 
+Solucionada::~Solucionada() {}
 
-Estado* Solucionada::clonar() const {
-    return new Solucionada(*this);
+void Solucionada::agregarRespuesta(Respuesta* respuesta, Pregunta* pregunta) {
+	cout << "La pregunta está solucionada, no admite más respuestas" << endl;
 }
-
-void Solucionada::agregarRespuesta(Respuesta* respuesta, Pregunta* pregunta){
-	pregunta->agregarRespuesta(respuesta);
-}
-
-
-
-

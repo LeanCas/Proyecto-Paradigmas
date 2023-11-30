@@ -12,8 +12,7 @@
 class Inactiva : public Estado {
 public:
 	Inactiva();
-	string getTipo();
-	Estado* clonar() const override;
+	~Inactiva();
 	void agregarRespuesta(Respuesta* respuesta, Pregunta* pregunta);
 
 };

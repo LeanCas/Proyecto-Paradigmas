@@ -8,19 +8,14 @@
 #include "Activa.h"
 #include "Pregunta.h"
 #include "Respuesta.h"
-#include <vector>
 
 Activa::Activa(): Estado() {
 	tipo = "Activa";
 }
 
-Estado* Activa::clonar() const {
-    return new Activa(*this);
-}
- void Activa::agregarRespuesta(Respuesta* respuesta, Pregunta* pregunta){
+Activa::~Activa() {}
 
+void Activa::agregarRespuesta(Respuesta* respuesta, Pregunta* pregunta){
 	 pregunta->agregarRespuesta(respuesta);
-
- }
-
-
+	 pregunta->notificarUsuario(respuesta);
+}

@@ -12,7 +12,7 @@
 class Suspendida : public Estado {
 public:
 	Suspendida();
-	Estado* clonar() const override;
+	~Suspendida();
 	void agregarRespuesta(Respuesta* respuesta, Pregunta* pregunta);
 };
 

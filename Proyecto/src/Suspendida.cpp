@@ -7,18 +7,14 @@
 
 #include "Suspendida.h"
 #include "Pregunta.h"
+#include "Respuesta.h"
 
-Suspendida::Suspendida(): Estado(){
+Suspendida::Suspendida(): Estado() {
 	tipo = "Suspendida";
 }
 
+Suspendida::~Suspendida() {}
 
-Estado* Suspendida :: clonar() const {
-	return nullptr;
-}
-
-void Suspendida::agregarRespuesta(Respuesta* respuesta, Pregunta* pregunta){
+void Suspendida::agregarRespuesta(Respuesta* respuesta, Pregunta* pregunta) {
 	pregunta->agregarRespuesta(respuesta);
 }
-
-
