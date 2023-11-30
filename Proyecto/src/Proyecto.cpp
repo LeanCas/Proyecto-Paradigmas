@@ -91,6 +91,8 @@ int main() {
 	sistema->eliminarUsuario(2);
 	sistema->listarPublicaciones();
 
+	usuario1->aceptarSolucion(sistema->getPregunta(1), 7);
+	sistema->listarPublicaciones();
 
 	return 0;
 }

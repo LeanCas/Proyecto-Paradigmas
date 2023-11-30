@@ -28,6 +28,7 @@ void Respuesta::listarInformacion() {
 	cout << "Contenido: " << contenido << endl;
 	cout << "Me gusta: " << meGusta << endl;
 	cout << "Fecha: " << fecha << endl;
+	cout << "Aceptada :" << aceptada << endl;
 	cout << endl;
 }
 

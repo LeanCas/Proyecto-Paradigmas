@@ -29,7 +29,7 @@ public:
 	void crearRespuesta(int idPregunta,int idUsuario,string imagen,string contenido);		// OK - revisado
 	void suspenderPublicacion(int idPublicacion);		// OK - revisado
 	void listarPublicaciones();		// OK - revisado
-	void eliminarPublicacion(int);		// OK - revisado
+	void eliminarPublicacion(int);		// ANDA MAL - revisado
 	void eliminarUsuario(int idUsuario);		// OK - revisado
 	void darMG(int idUsuario, int idRespuesta);		// OK - revisado
 	void rankearUsuarios();		// OK - revisado
