@@ -25,9 +25,11 @@ Respuesta::~Respuesta() {
 }
 
 void Respuesta::listarInformacion() {
+	cout << endl;
 	cout << "Contenido: " << contenido << endl;
 	cout << "Me gusta: " << meGusta << endl;
 	cout << "Fecha: " << fecha << endl;
+	cout << endl;
 }
 
 void Respuesta::darMG() {

@@ -13,6 +13,13 @@
 
 Estado* Pregunta::estadoActiva = new Activa();
 
+Estado* Pregunta::estadoInactiva = new Inactiva();
+
+Estado* Pregunta::estadoSolucionada = new Solucionada();
+
+Estado* Pregunta::estadoSuspendida = new Suspendida();
+
+
 // Constructor predeterminado
 Pregunta::Pregunta(): Publicacion(), titulo(""), descripcion("") {
 	respuestas = vector<Respuesta*>();

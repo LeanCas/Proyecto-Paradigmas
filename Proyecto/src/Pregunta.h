@@ -24,6 +24,9 @@ class Pregunta : public Publicacion {
 
 public:
 	static Estado* estadoActiva;
+	static Estado* estadoInactiva;
+	static Estado* estadoSuspendida;
+	static Estado* estadoSolucionada;
 
 
 public:
