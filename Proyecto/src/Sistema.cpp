@@ -52,8 +52,10 @@ void Sistema::listarPublicaciones() {
 	for(Publicacion* publicacion : publicaciones) {
 		if(publicacion->getTipo() == 1) {
 			Pregunta* pregunta = dynamic_cast<Pregunta*>(publicacion);
+			cout<<endl; //AGREGUE ESTA LINEA PARA DARLE MAS ESPACIO A LAS PUBLICACIONES
 			pregunta->listarInformacion();
-			pregunta->listarRespuestas();
+			pregunta->rankearRespuesta();
+			//pregunta->listarRespuestas();
 		}
 	}
 }
@@ -61,7 +63,6 @@ void Sistema::listarPublicaciones() {
 void Sistema::eliminarPublicacion(int idPublicacion) {
 	Publicacion* publicacionAEliminar = getPublicacion(idPublicacion);
 	if(publicacionAEliminar != nullptr) {
-
 		vector<Publicacion*>::iterator it;
 		for(it = publicaciones.begin(); it!=publicaciones.end(); ++it) {
 			if((*it) == publicacionAEliminar) {

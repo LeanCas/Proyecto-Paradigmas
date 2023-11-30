@@ -69,7 +69,7 @@ int main() {
 
 	//PROBAMOS BUSCAR PUBLICACION
 
-	Publicacion* respuesta1 = sistema->buscarPublicacion(1);
+	//Publicacion* respuesta1 = sistema->buscarPublicacion(1);
 
 	// HACEMOS RESPUESTAS
 
@@ -78,19 +78,14 @@ int main() {
 	sistema->crearRespuesta(1,2,"osito.png","contenido-respuesta2");
 
 	sistema->crearRespuesta(1,3,"osito.png","contenido-respuesta3");
-
-	sistema->listarPublicaciones();
-
 	//PRUEBA DE FUNCION DE DAR ME GUSTA, es id=6 por el autonumerico incremental en publicaciones, al crearse 5 publicaciones antes de pregunta
 	sistema->darMG(1,6);
 	sistema->darMG(2,6);
 	sistema->darMG(3,6);
-
+	sistema->darMG(3,8);
+	cout<<endl<<endl<<"Mostrar las publicaciones y sus me gustas en respuestas"<<endl;
 	sistema->listarPublicaciones();
 
-	sistema->eliminarPublicacion(8);
-
-	sistema->listarPublicaciones();
 
 
 	return 0;
