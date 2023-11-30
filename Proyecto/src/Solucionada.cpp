@@ -6,9 +6,19 @@
  */
 
 #include "Solucionada.h"
+#include "Pregunta.h"
 
-string Solucionada :: getTipo(){
-	return "Solucionada";
+Solucionada::Solucionada(): Estado(){
+	tipo = "Solucionada";
+}
+
+
+Estado* Solucionada::clonar() const {
+    return new Solucionada(*this);
+}
+
+void Solucionada::agregarRespuesta(Respuesta* respuesta, Pregunta* pregunta){
+	pregunta->agregarRespuesta(respuesta);
 }
 
 

@@ -22,3 +22,5 @@ Estado* Activa::clonar() const {
 	 pregunta->agregarRespuesta(respuesta);
 
  }
+
+

@@ -12,9 +12,8 @@
 class Suspendida : public Estado {
 public:
 	Suspendida();
-	~Suspendida();
-	string getTipo();
 	Estado* clonar() const override;
+	void agregarRespuesta(Respuesta* respuesta, Pregunta* pregunta);
 };
 
 #endif /* SUSPENDIDA_H_ */

@@ -10,6 +10,9 @@
 #include "Pregunta.h"
 #include "Usuario.h"
 #include "Activa.h"
+#include "Inactiva.h"
+#include "Solucionada.h"
+#include "Suspendida.h"
 
 Estado* Pregunta::estadoActiva = new Activa();
 

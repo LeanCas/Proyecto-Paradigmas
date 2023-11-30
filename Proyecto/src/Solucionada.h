@@ -12,8 +12,8 @@
 class Solucionada : public Estado {
 public:
 	Solucionada();
-	~Solucionada();
-	string getTipo();
+	Estado* clonar() const override;
+	void agregarRespuesta(Respuesta* respuesta, Pregunta* pregunta);
 };
 
 #endif /* SOLUCIONADA_H_ */

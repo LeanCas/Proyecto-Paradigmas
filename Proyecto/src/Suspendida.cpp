@@ -6,19 +6,19 @@
  */
 
 #include "Suspendida.h"
+#include "Pregunta.h"
 
-Suspendida :: Suspendida(){}
-
-Suspendida :: ~Suspendida(){}
-
-string Suspendida :: getTipo(){
-	return "Suspendida";
+Suspendida::Suspendida(): Estado(){
+	tipo = "Suspendida";
 }
 
+
 Estado* Suspendida :: clonar() const {
-	/*Suspendida* suspendida = new Suspendida();
-	return suspendida;*/
 	return nullptr;
+}
+
+void Suspendida::agregarRespuesta(Respuesta* respuesta, Pregunta* pregunta){
+	pregunta->agregarRespuesta(respuesta);
 }
 
 
