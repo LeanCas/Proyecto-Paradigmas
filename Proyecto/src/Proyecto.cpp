@@ -83,9 +83,9 @@ int main() {
 	sistema->darMG(2,6);
 	sistema->darMG(3,6);
 	sistema->darMG(3,8);
+	sistema->darMG(1,6);
 	cout<<endl<<endl<<"Mostrar las publicaciones y sus me gustas en respuestas"<<endl;
 	sistema->listarPublicaciones();
-
 
 
 	return 0;

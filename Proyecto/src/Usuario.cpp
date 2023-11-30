@@ -87,9 +87,19 @@ void Usuario::agregarRespuestaLikeada(Respuesta* respuesta) {
 
 
 
-bool Usuario::pertenece(int idBuscado) {
+/*bool Usuario::pertenece(int idBuscado) {
 	for (Publicacion* publicacion : publicaciones) {
 		if (publicacion->getId() == idBuscado) {
+			return true;
+		}
+	}
+	return false;
+}*/
+//MODIFICO PERTENECE
+bool Usuario::pertenece(int idBuscado) {
+	for (Respuesta* respuesta : likesRespuestas) {
+		if(respuesta->getId()==idBuscado){
+			cout<<endl<<"Ya le diste me gusta a esta respuesta, no puedes darle mas de uno"<<endl;
 			return true;
 		}
 	}
