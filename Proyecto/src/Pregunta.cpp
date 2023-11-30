@@ -15,11 +15,8 @@
 #include "Suspendida.h"
 
 Estado* Pregunta::estadoActiva = new Activa();
-
 Estado* Pregunta::estadoInactiva = new Inactiva();
-
 Estado* Pregunta::estadoSolucionada = new Solucionada();
-
 Estado* Pregunta::estadoSuspendida = new Suspendida();
 
 
@@ -27,13 +24,13 @@ Estado* Pregunta::estadoSuspendida = new Suspendida();
 Pregunta::Pregunta(): Publicacion(), titulo(""), descripcion("") {
 	respuestas = vector<Respuesta*>();
 	// respuestas = {};
-	estado = new Activa();
+	estado = estadoActiva;
 }
 
 // Constructor sobrecargado
-Pregunta::Pregunta(string imagen, Fecha fecha, Usuario* usuario, string titulo, string descripcion, vector<string> tags, vector<Respuesta*> respuestas): Publicacion(1, imagen, fecha, usuario), titulo(titulo), descripcion(descripcion), tags(tags), estado(new Activa()) {}
+Pregunta::Pregunta(string imagen, Fecha fecha, Usuario* usuario, string titulo, string descripcion, vector<string> tags, vector<Respuesta*> respuestas): Publicacion(1, imagen, fecha, usuario), titulo(titulo), descripcion(descripcion), tags(tags), estado(estadoActiva) {}
 
-// Constructor copia
+// Constructor copia (evaluar si es necesario mantenerlo o no)
 Pregunta::Pregunta(const Pregunta& p): Publicacion(p), titulo(p.titulo), descripcion(p.descripcion), tags(p.tags),estado(p.estado){
     // Clona el estado de la pregunta referenciada utilizando el método clonar
   //  estado = p.estado->clonar();
@@ -113,4 +110,9 @@ void Pregunta::rankearRespuesta() {
                   }
               });
     this->listarRespuestas();
+}
+
+void Pregunta::notificarUsuario(Respuesta* respuesta) {
+	string mensaje = "El usuario " + respuesta->getUsuario()->getNombre() + " respondió a tu pregunta: " + this->getTitulo();
+	this->usuario->agregarNotificacion(mensaje);
 }

@@ -20,24 +20,21 @@ class Pregunta : public Publicacion {
 	string descripcion;
 	vector<string> tags;
 	vector<Respuesta*> respuestas;
-	Estado* estado;
+	Estado* estado;		// Estado actual de la pregunta
 
-public:
+public:		// Estados disponibles para la pregunta
 	static Estado* estadoActiva;
 	static Estado* estadoInactiva;
 	static Estado* estadoSuspendida;
 	static Estado* estadoSolucionada;
-
 
 public:
 	Pregunta();
 	Pregunta(string imagen="", Fecha fecha=Fecha(), Usuario* usuario=nullptr, string titulo="", string descripcion="", vector<string> tags={}, vector<Respuesta*> respuestas={});
 	Pregunta(const Pregunta& p);
 	~Pregunta();
-	void addRespuesta(Respuesta* respuesta);
-
-	void agregarRespuesta(Respuesta* respuesta);
-
+	void addRespuesta(Respuesta* respuesta);		// Delega el control de adición de respuesta según el estado actual de la pregunta
+	void agregarRespuesta(Respuesta* respuesta);		// Añade la respuesta al vector 'respuestas'
 	Estado* getEstado();
 	void cambiarEstado(Estado* nuevoEstado);
 	void rankearRespuesta();
