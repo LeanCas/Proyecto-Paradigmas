@@ -44,7 +44,7 @@ void Sistema::suspenderPublicacion(int idPublicacion) {
 	fechaPublicacion = publicacion->getFecha();
 
 	if(fechaActual.getMes() - fechaPublicacion.getMes() >= 6){
-		publicacion->cambiarEstado(publicacion->estadoSuspendida);
+		publicacion->cambiarEstado(publicacion->estadoInactiva);
 	}
 }
 
