@@ -44,7 +44,7 @@ int main() {
 
 	Usuario* usuario3 = sistema->getUsuario(3);
 
-	usuario1->listarInformacion();
+	//usuario1->listarInformacion();
 
 	vector<string> tags;
 
@@ -65,7 +65,7 @@ int main() {
 
 	// LISTAMOS PUBLICACIONES
 
-	sistema->listarPublicaciones();
+	//sistema->listarPublicaciones();
 
 	//PROBAMOS BUSCAR PUBLICACION
 
@@ -78,21 +78,28 @@ int main() {
 	sistema->crearRespuesta(1,2,"osito.png","contenido-respuesta2");
 
 	sistema->crearRespuesta(1,3,"osito.png","contenido-respuesta3");
+
+	//.sistema->getUsuario(1)->aceptarSolucion(sistema->getPublicacion())
+
 	//PRUEBA DE FUNCION DE DAR ME GUSTA, es id=6 por el autonumerico incremental en publicaciones, al crearse 5 publicaciones antes de pregunta
 	sistema->darMG(1,6);
 	sistema->darMG(2,6);
 	sistema->darMG(3,6);
 	sistema->darMG(3,8);
 	sistema->darMG(1,6);
-	cout<<endl<<endl<<"Mostrar las publicaciones y sus me gustas en respuestas"<<endl;
-	sistema->listarPublicaciones();
+	//cout<<endl<<endl<<"Mostrar las publicaciones y sus me gustas en respuestas"<<endl;
+	//sistema->listarPublicaciones();
 
-	cout<<endl<<endl<<"Prueba de cambio de estado"<<endl;
+	/*cout<<endl<<endl<<"Prueba de cambio de estado"<<endl;
 	sistema->eliminarUsuario(2);
 	sistema->listarPublicaciones();
-
-	usuario1->aceptarSolucion(sistema->getPregunta(1), 7);
-	sistema->listarPublicaciones();
-
+	*/
+	//usuario1->aceptarSolucion(sistema->getPregunta(1), 7);
+	sistema->getUsuario(1)->aceptarSolucion(dynamic_cast<Pregunta*>(sistema->getPublicacion(1)),7);
+	sistema->crearRespuesta(1,2,"osito.png","contenido-respuesta2");
+	sistema->getUsuario(1)->aceptarSolucion(dynamic_cast<Pregunta*>(sistema->getPublicacion(1)),8);
+	//sistema->getUsuario(1)->listarRespuestasAceptadas();
+	sistema->rankearUsuarios();
+	//sistema->listarPublicaciones();
 	return 0;
 }

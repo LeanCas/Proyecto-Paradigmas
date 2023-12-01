@@ -18,4 +18,5 @@ Activa::~Activa() {}
 void Activa::agregarRespuesta(Respuesta* respuesta, Pregunta* pregunta){
 	 pregunta->agregarRespuesta(respuesta);
 	 pregunta->notificarUsuario(respuesta);
+	 respuesta->agregarRespuestaUsuario();
 }

@@ -19,4 +19,5 @@ void Inactiva::agregarRespuesta(Respuesta* respuesta, Pregunta* pregunta){
 	pregunta->cambiarEstado(pregunta->estadoActiva);
 	pregunta->agregarRespuesta(respuesta);
 	pregunta->notificarUsuario(respuesta);
+	respuesta->agregarRespuestaUsuario();
 }

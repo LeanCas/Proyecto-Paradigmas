@@ -17,4 +17,5 @@ Suspendida::~Suspendida() {}
 
 void Suspendida::agregarRespuesta(Respuesta* respuesta, Pregunta* pregunta) {
 	pregunta->agregarRespuesta(respuesta);
+	respuesta->agregarRespuestaUsuario();
 }

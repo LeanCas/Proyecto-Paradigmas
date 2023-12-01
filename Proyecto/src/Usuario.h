@@ -46,6 +46,7 @@ public:
 	void aceptarSolucion(Pregunta* pregunta, int idRespuesta);
 	void listarInformacion();
 	void agregarNotificacion(string mensaje);
+	void agregarRespuesta(Respuesta* );
 };
 
 

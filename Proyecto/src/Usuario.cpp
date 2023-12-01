@@ -8,6 +8,7 @@
 #include "Usuario.h"
 #include "Publicacion.h"
 #include "Respuesta.h"
+#include "Estado.h"
 #include "Pregunta.h"
 
 using namespace std;
@@ -129,9 +130,13 @@ void Usuario::listarInformacion(){
 }
 
 void Usuario::aceptarSolucion(Pregunta* pregunta, int idRespuesta) {
+	if(pregunta->getEstado()->getTipo() == "Solucionada"){
+		return;
+	}
 	for (Respuesta* respuesta : pregunta->getRespuestas()) {
 		if (respuesta->getId() == idRespuesta) {
 			respuesta->aceptarSolucion();
+			pregunta->cambiarEstado(pregunta->estadoSolucionada);
 		}
 	}
 }
@@ -152,4 +157,8 @@ Respuesta* Usuario::crearRespuesta(Pregunta* pregunta, string imagen, string con
 
 void Usuario::agregarNotificacion(string mensaje) {
 	notificaciones.push_back(mensaje);
+}
+
+void Usuario::agregarRespuesta(Respuesta* respuesta){
+	publicaciones.push_back(respuesta);
 }

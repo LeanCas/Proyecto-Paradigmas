@@ -28,6 +28,7 @@ public:
 	void listarInformacion() override;
 	bool esAceptada();
 	void aceptarSolucion();
+	void agregarRespuestaUsuario();
 };
 
 #endif /* RESPUESTA_H_ */

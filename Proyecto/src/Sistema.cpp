@@ -109,7 +109,6 @@ void Sistema::rankearUsuarios(){
 	        cout << "ID: "<<usuario->getId()<<", Nombre: "<<usuario->getNombre()<<endl;
 	    }
 }
-
 // Getters
 
 Publicacion* Sistema::getPublicacion(int idPublicacion) {
