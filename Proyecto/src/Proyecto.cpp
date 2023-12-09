@@ -90,16 +90,18 @@ int main() {
 	//cout<<endl<<endl<<"Mostrar las publicaciones y sus me gustas en respuestas"<<endl;
 	//sistema->listarPublicaciones();
 
-	/*cout<<endl<<endl<<"Prueba de cambio de estado"<<endl;
+	cout<<endl<<endl<<"Prueba de cambio de estado"<<endl;
 	sistema->eliminarUsuario(2);
 	sistema->listarPublicaciones();
-	*/
 	//usuario1->aceptarSolucion(sistema->getPregunta(1), 7);
 	sistema->getUsuario(1)->aceptarSolucion(dynamic_cast<Pregunta*>(sistema->getPublicacion(1)),7);
 	sistema->crearRespuesta(1,2,"osito.png","contenido-respuesta2");
 	sistema->getUsuario(1)->aceptarSolucion(dynamic_cast<Pregunta*>(sistema->getPublicacion(1)),8);
 	//sistema->getUsuario(1)->listarRespuestasAceptadas();
 	sistema->rankearUsuarios();
-	//sistema->listarPublicaciones();
+	sistema->listarPublicaciones();
+
+
+
 	return 0;
 }
