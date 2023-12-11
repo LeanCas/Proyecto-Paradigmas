@@ -46,13 +46,17 @@ int main() {
 
 	//usuario1->listarInformacion();
 
-	vector<string> tags;
+	vector<string> tags, tag2;
 
 	tags.push_back("tag1");
 	tags.push_back("tag2");
 	tags.push_back("tag3");
 
-	sistema->crearPregunta("oso.png","Pregunta 1", "Descripcion 1", tags, 1);
+	tag2.push_back("tag");
+	tag2.push_back("tag4");
+
+
+	sistema->crearPregunta("oso.png","Pregunta 1", "Descripcion 1", tag2, 1);
 
 	sistema->crearPregunta("oso.png","Pregunta 2", "Descripcion 2", tags, 1);
 
@@ -100,6 +104,10 @@ int main() {
 	//sistema->getUsuario(1)->listarRespuestasAceptadas();
 	sistema->rankearUsuarios();
 	sistema->listarPublicaciones();
+
+	string buscado = "tag";
+
+	sistema->buscarPorTag(buscado);
 
 
 

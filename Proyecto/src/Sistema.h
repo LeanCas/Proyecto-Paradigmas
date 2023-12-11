@@ -19,7 +19,7 @@ using namespace std;
 class Sistema {
 	string nombre;
 	vector<Publicacion*> publicaciones;	// Agregación
-	vector<Usuario*> usuarios;	// Debe ser composición, no un vector de punteros (?)
+	vector<Usuario*> usuarios;
 
 public:
 	Sistema(string);
@@ -29,10 +29,10 @@ public:
 	void crearRespuesta(int idPregunta,int idUsuario,string imagen,string contenido);		// OK - revisado
 	void suspenderPublicacion(int idPublicacion);		// OK - revisado
 	void listarPublicaciones();		// OK - revisado
-	void eliminarPublicacion(int);		// ANDA MAL - revisado
 	void eliminarUsuario(int idUsuario);		// OK - revisado
 	void darMG(int idUsuario, int idRespuesta);		// OK - revisado
 	void rankearUsuarios();		// OK - revisado
+	void buscarPorTag(string buscado);
 
 	// Getters
 

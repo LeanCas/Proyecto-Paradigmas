@@ -43,6 +43,7 @@ public:
 	void listarRespuestas();
 	vector<Respuesta*> getRespuestas();
 	void notificarUsuario(Respuesta*);
+	vector<string> getTags();
 };
 
 

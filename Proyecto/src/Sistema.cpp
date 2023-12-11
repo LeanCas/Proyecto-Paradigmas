@@ -60,19 +60,6 @@ void Sistema::listarPublicaciones() {
 	}
 }
 
-void Sistema::eliminarPublicacion(int idPublicacion) {
-	Publicacion* publicacionAEliminar = getPublicacion(idPublicacion);
-	if(publicacionAEliminar != nullptr) {
-		vector<Publicacion*>::iterator it;
-		for(it = publicaciones.begin(); it!=publicaciones.end(); ++it) {
-			if((*it) == publicacionAEliminar) {
-				delete (*it);
-				publicaciones.erase(it);
-				break;
-			}
-		}
-	}
-}
 
 void Sistema::eliminarUsuario(int idUsuario) {
     Usuario* usuarioAEliminar = getUsuario(idUsuario);
@@ -108,6 +95,20 @@ void Sistema::rankearUsuarios(){
 	    for (Usuario* usuario : usuarios) {
 	        cout << "ID: "<<usuario->getId()<<", Nombre: "<<usuario->getNombre()<<endl;
 	    }
+}
+
+
+void Sistema::buscarPorTag(string buscado){
+	for(Publicacion* publicacion : publicaciones) {
+			if(publicacion->getTipo() == 1) {
+				Pregunta* pregunta = dynamic_cast<Pregunta*>(publicacion);
+				for(int i=0 ; i<pregunta->getTags().size() ; i++){
+					if(pregunta->getTags()[i] == buscado){
+						pregunta->listarInformacion();
+					}
+				}
+			}
+		}
 }
 // Getters
 

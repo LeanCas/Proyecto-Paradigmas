@@ -116,3 +116,7 @@ void Pregunta::notificarUsuario(Respuesta* respuesta) {
 	string mensaje = "El usuario " + respuesta->getUsuario()->getNombre() + " respondió a tu pregunta: " + this->getTitulo();
 	this->usuario->agregarNotificacion(mensaje);
 }
+
+vector<string> Pregunta::getTags(){
+	return this->tags;
+}
